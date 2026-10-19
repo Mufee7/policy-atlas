@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -81,3 +81,17 @@ next-env.d.ts
 # Python evaluator generated caches
 __pycache__/
 *.pyc
+
+# Additional local test reports, databases and archived data
+/playwright-report/
+/test-results/
+/htmlcov/
+.coverage
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-wal
+*.db-shm
+*.zip
+*.7z

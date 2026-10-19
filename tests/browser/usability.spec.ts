@@ -81,7 +81,7 @@ for (const width of [320,375]) {
     await page.getByRole('button', {name:'About this project',exact:true}).click();
     await expect(menu).toHaveAttribute('aria-expanded','false');
     await expect(menu).toBeFocused();
-    await expect(page.getByRole('heading',{name:'Built to be understood.',exact:true})).toBeVisible();
+    await expect(page.getByRole('heading',{name:'About Policy Atlas',exact:true})).toBeVisible();
     await page.getByRole('button', {name: 'Upload document', exact: true}).click();
     const upload = page.getByRole('dialog', {name: 'Add a policy to your library'});
     expect(await upload.evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);

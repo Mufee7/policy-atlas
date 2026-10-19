@@ -4,10 +4,10 @@ import {strToU8,zipSync,unzipSync} from 'fflate';
 import {allowedCheckpointPath,requiredCheckpointFiles,prepareCheckpoint,verifyCheckpoint} from '../scripts/checkpoint-utils.mjs';
 
 test('working-folder checkpoint excludes non-source roots, secrets, generated data and path escapes',()=>{
- for(const path of ['.aws/credentials','.agents/state.json','.codex/settings.json','.openai/token.json','private.txt','SOURCE-SNAPSHOT.json','next-env.d.ts','app/.env.local','docs/key.pem','app/node_modules/x.js','build/generated.js','outputs/video.webm','.tools/node.exe','app/../secret.txt','/app/page.tsx','C:/app/page.tsx','app/.private/file.txt'])assert.equal(allowedCheckpointPath(path),false,path);
+ for(const path of ['.aws/credentials','.agents/state.json','.codex/settings.json','.openai/token.json','private.txt','SOURCE-SNAPSHOT.json','next-env.d.ts','app/.env.local','docs/key.pem','app/node_modules/x.js','build/generated.js','outputs/video.webm','.tools/node.exe','app/../secret.txt','/app/page.tsx','C:/app/page.tsx','app/.private/file.txt','scripts/__pycache__/evaluate_answers.pyc','evaluation/private/labels.json','public/uploads/private.pdf'])assert.equal(allowedCheckpointPath(path),false,path);
 });
 test('working-folder checkpoint includes new migrations, tests, preferences and licensed assets',()=>{
- for(const path of [...requiredCheckpointFiles,'drizzle/0003_easy_bruce_banner.sql','examples/d1/db/schema.ts','tests/browser/usability.spec.ts','public/models/minilm/onnx/model_quantized.onnx','vendor/shadcn-tailwind-4.13.0.LICENSE.md','build/sites-vite-plugin.LICENSE'])assert.equal(allowedCheckpointPath(path),true,path);
+ for(const path of [...requiredCheckpointFiles,'PROJECT_STATUS.md','ROADMAP.md','evaluation/answering/final/report.json','evaluation/answering/final/labels.json','drizzle/0003_easy_bruce_banner.sql','examples/d1/db/schema.ts','tests/browser/usability.spec.ts','public/models/minilm/onnx/model_quantized.onnx','vendor/shadcn-tailwind-4.13.0.LICENSE.md','build/sites-vite-plugin.LICENSE'])assert.equal(allowedCheckpointPath(path),true,path);
 });
 function fixture(){return Object.fromEntries(requiredCheckpointFiles.map(path=>[path,strToU8(path==='.openai/hosting.json'?JSON.stringify({project_id:'private-id',d1:'DB',r2:'BUCKET'}):'synthetic source '+path)]));}
 test('checkpoint round trip verifies payloads and clearly distinguishes upstream provenance from a commit',()=>{

@@ -1,5 +1,7 @@
 # Grounded extractive answering — results and failures
 
+These measurements belong to the frozen answering milestone below. Later [presentation/repository cleanup](REPOSITORY_AUDIT.md) changed UI wording and export exclusions, without changing answering/retrieval/scoring code or reusing the consumed final set. Original results, labels and predictions remain intact.
+
 Date: 2026-10-19. Baseline `c2cfe5e`; protocol/reservation `51fa082`; implementation frozen at `5b6c60fe04101f3a1cc403c0b8b221f158abccbb`. No application/evaluator changes followed final scoring. [Protocol](ANSWERING_PROTOCOL.md), [freeze](../evaluation/answering/implementation-freeze.json), [attempt](../evaluation/answering/final/attempt.json).
 
 ## Final one-shot results

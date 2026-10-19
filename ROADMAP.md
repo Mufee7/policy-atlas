@@ -59,6 +59,8 @@ Exit: documented trusted identity boundary, passed account-isolation tests, depl
 
 ## 6. Portfolio handoff
 
+Repository/branding cleanup on 2026-10-19 standardized Policy Atlas presentation and shortened the README, with original increment details retained in [implementation history](docs/IMPLEMENTATION_HISTORY.md). [The repository audit](docs/REPOSITORY_AUDIT.md) records preserved configuration/licenses, exclusions and checks. This does not close independent evaluation or deployment/security requirements; those remain higher priority than further visual polish.
+
 Prepare an architecture walkthrough, short demo, reproduction commands and an honest results/error-analysis page backed by the completed milestones. Explain pretrained ML inference, rule-based logic, extractive/generated modes and independent-evaluation protocol separately. Record dataset/model licenses and the author's project-license decision before public redistribution. Resume claims must match measured results; retain failed experiments and limitations.
 
 Convenience features and visual polish remain lower priority than grounded answers, refusal and independent evaluation. The bounded answering milestone is implemented; the **independent-evaluation follow-up in milestone 1 is the single recommended next action**, not work started now.

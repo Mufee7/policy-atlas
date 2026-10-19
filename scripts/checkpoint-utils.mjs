@@ -1,8 +1,8 @@
 import {createHash} from 'node:crypto';
 import {allowedSourcePath,standaloneManifest} from './source-export-utils.mjs';
 
-export const checkpointRoots=['app','components','db','docs','drizzle','hooks','lib','public','scripts','tests','vendor','build','examples'];
-export const checkpointRootFiles=['Policy-Atlas.cmd','AGENTS.md','README.md','.gitignore','.npmrc','.env.example','cloudflare-env.d.ts','components.json','drizzle.config.ts','eslint.config.mjs','next.config.ts','package.json','playwright.config.ts','pnpm-lock.yaml','pnpm-workspace.yaml','postcss.config.mjs','tsconfig.json','vite.config.ts'];
+export const checkpointRoots=['app','components','db','docs','drizzle','hooks','lib','public','scripts','tests','vendor','build','examples','evaluation'];
+export const checkpointRootFiles=['PROJECT_STATUS.md','ROADMAP.md','Policy-Atlas.cmd','AGENTS.md','README.md','.gitignore','.npmrc','.env.example','cloudflare-env.d.ts','components.json','drizzle.config.ts','eslint.config.mjs','next.config.ts','package.json','playwright.config.ts','pnpm-lock.yaml','pnpm-workspace.yaml','postcss.config.mjs','tsconfig.json','vite.config.ts'];
 const buildFiles=['connector-preview-plugin.mjs','connector-preview-worker.mjs','sites-vite-plugin.LICENSE','sites-vite-plugin.ts','sites-worker.ts'];
 export const requiredCheckpointFiles=['AGENTS.md','app/page.tsx','package.json','pnpm-lock.yaml','playwright.config.ts','docs/LOCAL_SETUP.md','docs/RELEASE_CHECKPOINT.md','scripts/local-db.mjs','.openai/hosting.json'];
 export function allowedCheckpointPath(name){
@@ -44,4 +44,3 @@ export function verifyCheckpoint(files){
  if('project_id' in JSON.parse(new TextDecoder().decode(files['policy-atlas/.openai/hosting.json'])))throw new Error('Hosted project identity was retained');
  return manifest;
 }
-

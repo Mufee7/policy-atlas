@@ -1,103 +1,55 @@
 # Policy Atlas
 
-Enterprise Policy & Compliance Intelligence Assistant — first retrieval release for Mufeedh Ahmed.
+Version-aware policy retrieval, source-quoted answers and evidence-linked review. An AI/ML engineering portfolio project by Mufeedh Ahmed.
 
-**Current project inventory:** [PROJECT_STATUS.md](PROJECT_STATUS.md). **Remaining original requirements and next milestone:** [ROADMAP.md](ROADMAP.md). The goal is an AI/ML engineering internship portfolio with learning alongside implementation, using free additional services. The increment descriptions and test counts below retain historical context; the status file takes precedence for current capability and verification claims.
+Policy Atlas makes policy evidence inspectable: find the relevant edition, read its qualifications, and follow citations to the stored source. It is a local portfolio prototype, not a compliance authority or a production-security claim.
 
-## Implemented
-- Bounded extractive answers with exact quotations, full qualification context and explicit refusal. [Question forms](docs/ANSWERING_PROTOCOL.md), [one-shot results/failures](docs/ANSWERING_RESULTS.md), [Python evaluator/learning exercise](docs/ANSWERING_LEARNING.md). Internal sample: 16/20 correct answerable and 0/20 unsupported; not independently authored evaluation or general reliability evidence.
-- Private hosted web application with owner-scoped persisted uploads in D1.
-- Six bundled fictional policy versions across four policy families; one historical version and one draft.
-- TXT, PDF and DOCX uploads with manual metadata, exact-file/extracted-text duplicate detection, version identity uniqueness, original-file downloads and extracted-text downloads. See the ingestion increment below for format limits.
-- BM25 retrieval (k1=1.2, b=0.75) over blank-line-separated sections with original 1-based line ranges. Each filtered corpus supplies its own IDF statistics.
-- Approval-status, department and effective-date filters; start inclusive / end exclusive. Approval lifecycle status and validity period are distinct. Overlaps are flagged, never silently resolved.
-- Complete evidence passages, source inspector, line highlights and explicitly non-confidence ranking scores.
-- On-demand development evaluation against bundled documents only.
+## Capabilities
 
-## Deliberate limitations
-No LLM calls, generated advice, OCR, explicit synonym expansion, exhaustive conflict inference, held-out evaluation, or enterprise security certification. Optional local embeddings are described below. Blank-line grouping is suitable for the initial controlled TXT documents, not an arbitrary policy parser. Search returns lexical matches, not determinations of applicability or compliance. Manual metadata is not automatically extracted or verified. Text download preserves decoded text, not necessarily original file bytes/BOM. SHA-256 hashes the decoded UTF-8 text re-encoded as UTF-8, not a raw upload byte archive. The database retains complete extracted text and R2 retains originals for new uploads. The prototype should be used with synthetic, non-sensitive material.
+- TXT, text-based PDF and DOCX ingestion with metadata, versions, provenance and original-file downloads.
+- BM25 keyword and optional on-device MiniLM semantic retrieval, filtered by date, status and department.
+- Bounded extractive answers with exact quotations, qualification context, verified citations and explicit refusal. No generated answers.
+- Evidence-linked version comparison and rule-based potential-conflict review with saved human assessments.
+- Owner-scoped document/review APIs, D1 metadata/text storage, R2 originals and local backup/restore tools.
 
-## Architecture
-Browser → owner-authenticated `/api/documents` and `/api/conflict-reviews` routes → D1 via Drizzle, with originals in R2. Retrieval and evaluation execute in the browser over the owner's loaded library. The original hosting design relies on private Site access and trusted identity headers; current hosted security has not been independently verified. Database access is scoped to the platform user ID. Browser filtering is not an authorization boundary: the API only loads authorized owner records. No arbitrary document HTML is rendered. Shared bundled samples are code fixtures. Separate tables store document versions and conflict reviews; document_id groups a policy, version labels its edition, row UUID identifies a stored version, content_hash detects identical decoded text.
+[PROJECT_STATUS.md](PROJECT_STATUS.md) is the authoritative capability and verification inventory. [ROADMAP.md](ROADMAP.md) orders remaining work, led by independently authored evaluation and broader question coverage.
 
-## Development
+## Run locally on Windows
 
-See [the local setup guide](docs/LOCAL_SETUP.md) for complete Windows/PowerShell commands, development sign-in, local database migrations, troubleshooting and deployment boundaries. Use the checked-in pnpm lockfile. The original hosted checkout retains its managed execution profile; a clean clone/export defaults to portable Node scripts.
+Follow [LOCAL_SETUP.md](docs/LOCAL_SETUP.md) for Node/pnpm requirements, portable tools, installation, migrations and development sign-in. After installing dependencies, `Policy-Atlas.cmd` offers startup and local backup/restore commands.
 
-Windows users can run `Policy-Atlas.cmd` after dependency installation to start the app or back up/restore local data. See [launcher and backup instructions](docs/LOCAL_SETUP.md#windows-launcher-and-local-backups). Backups include private uploads and notes; stop all local servers before copying or restoring state.
+```powershell
+pnpm.cmd install --frozen-lockfile
+pnpm.cmd build
+pnpm.cmd local:db
+pnpm.cmd dev
+```
 
-From a clean committed Git checkout, `pnpm export:source` creates a source ZIP excluding secrets/runtime state and removes the hosted Site project ID from the exported manifest. This is code export, not a backup of uploaded documents or saved reviews. See [the portability audit](docs/PORTABILITY_AUDIT.md) for verified checks and remaining limits.
-
-For an exported working folder without Git metadata, `pnpm export:checkpoint` creates a separate allowlisted archive with per-file hashes and explicit working-folder provenance. `pnpm verify:checkpoint path.zip` verifies those payload hashes. See [the release checkpoint](docs/RELEASE_CHECKPOINT.md) for the current verification and remaining boundaries.
-
-## Verification
-Current Windows release checks are recorded in [RELEASE_CHECKPOINT.md](docs/RELEASE_CHECKPOINT.md), with setup commands in [LOCAL_SETUP.md](docs/LOCAL_SETUP.md) and dated checks in [VERIFICATION_HISTORY.md](docs/VERIFICATION_HISTORY.md): conflict-review persistence; TXT/PDF/DOCX ingestion and original downloads; upload rejection and scan warnings; and real browser WASM semantic inference, cancellation and keyword fallback. Tests use headed Chromium with local synthetic data and video recording. The increment-specific statements below describe their original verification boundaries; the local setup guide records subsequent checks and remaining limits.
-
-The original 17 automated tests cover source ranges, CRLF and whitespace separators, EOF, multiline VPN evidence, empty queries, case normalization, version cutoffs, draft/department filters, no hits, negation tokens, overlaps, valid dates, real evaluation labels, upload validation, and synthetic defaults.
-The 12 hand-authored development queries each have one labelled passage. On the initial corpus: Recall@1/3/5 = 100%, MRR = 1.000. These simple checks overlap with the implementation's sample vocabulary and are NOT evidence of generalization. No held-out result is claimed. Uploads are excluded from evaluation to keep runs reproducible.
-Historical note: browser QA was unavailable for the initial increment. Later Windows browser checks are recorded in the linked reports; type/build/test checks do not replace interactive browser testing or production API end-to-end testing.
+Open the loopback URL printed by the server and use the development sign-in URL in the setup guide. Use fictional, non-sensitive documents. All additional services must remain free; the current retrieval, answering and evaluator need no paid model API.
 
 ## Try it
-1. Search `VPN device` and open the source citation: both lines of the rule are returned.
-2. Search `remote days manager approval` on 2026-06-30 and 2026-07-01: version 1.0 permits two days, version 2.0 permits three.
-3. Search `hardware` with approved status: no result; choose draft review mode to see the unapproved proposal.
-4. Upload a fictional TXT policy with a new ID; refresh and inspect/download it. Re-upload identical text to exercise duplicate handling. Delete your upload when finished.
 
-## Next increments
-Use [ROADMAP.md](ROADMAP.md) for the ordered remaining requirements. Bounded extractive answering/refusal is implemented; independently authored evaluation and broader question coverage are the recommended follow-up. Several items in older increment plans, including semantic retrieval and potential-conflict review, already exist. All additional services must remain free.
+1. Ask `What is the remote work allowance?` with Approved only and date `2026-10-19`. Open the citations; check eligibility, written approval and exceptions alongside the allowance.
+2. Ask `What is the remote work insurance allowance?`. Related passages do not establish that entitlement, so the answerer refuses.
+3. Search `VPN device` and inspect the complete source passage. Compare Remote Work versions in the comparison view or inspect both sources in conflict review.
 
-## PDF / DOCX ingestion increment
-Text-based PDF and DOCX upload is now implemented. Extraction is lazy-loaded in the browser using PDF.js 6.4.299 and Mammoth 1.13.0; no file or text is sent to a hosted model. The upload modal has a read → inspect → save flow. PDF citations use physical page numbers and extracted line numbers; DOCX citations use extracted body paragraph ordinals, never Word page numbers. PDF retrieval units are pages, DOCX units are paragraphs, TXT units remain blank-line sections.
+See [supported question forms](docs/ANSWERING_PROTOCOL.md) and [the Python evaluator guide/exercise](docs/ANSWERING_LEARNING.md).
 
-Original bytes are stored in private R2 object storage and served through an owner-scoped download endpoint. Extracted text, provenance and metadata stay in D1. New uploads have both raw-file SHA-256 and decoded/extracted-text SHA-256; either an identical original or identical extracted text causes duplicate rejection. Legacy uploaded TXT records remain readable without a data backfill; originals cannot be reconstructed byte-for-byte for those records.
+## Evidence and limitations
 
-Limits: TXT 512 KB; PDF/DOCX 5 MB; PDF 100 pages; DOCX 3,000 extracted paragraphs; extracted text 512 KB per file and 4 MB across uploads; 100 uploaded versions. DOCX archive metadata is preflighted for required package entries and bounded advertised uncompressed size (20 MB total, 8 MB per entry, 2,000 entries). These prototype guards are not an enterprise malware scanner. Password-protected, damaged, unsupported and wholly unreadable files are rejected. Pages with under 20 non-whitespace characters receive a cautious warning: they may be blank, scanned or require OCR. Mixed PDFs may be saved after acknowledging omitted image text. No OCR is implemented.
+The one-shot, internally reserved synthetic answering experiment produced **16/20 correct answerable cases and 0/20 unsupported answers**, with four false refusals. [Every result and failure](docs/ANSWERING_RESULTS.md) is retained alongside [raw inputs, labels, predictions and scores](evaluation/answering/final/). The same coding agent authored the fixtures and implementation, and the documents share templates; this is not independently authored evaluation or general reliability evidence. The consumed final set must not become a fresh benchmark after tuning.
 
-Important limitations: PDF columns/tables may have incorrect reading order; images/diagrams are not interpreted. DOCX layout, headers, footers, comments, text boxes and tracked-change history may be missing. The source inspector displays escaped extracted text, not rendered HTML. Client extraction is validated structurally on the server but not independently re-extracted there; provenance represents parser output, not cryptographic proof of its correspondence to the file. A metadata update and object-store deletion do not form a distributed transaction; operational cleanup hardening remains future work.
+Software and browser checks verify particular behaviors, not answer accuracy. Retrieval similarity does not prove support; copied text can still be irrelevant. Semantic retrieval uses pretrained ML inference, the answer selector uses deterministic rules, and conflict checks use narrow English patterns. No generative model or OCR is implemented. Metadata is manual, extraction can lose layout/context, and no policy authority is inferred.
 
-The schema change is additive: format defaults to txt, and extraction/original reference columns are nullable. Existing policies and their source references are preserved. The baseline evaluation still uses only bundled TXT fixtures, so scores remain directly comparable. PDF/DOCX diagnostic tests are separate.
+Hosted authentication/account isolation, production recovery, broad document accuracy and alternative-host deployment remain unverified. Existing routes rely on a trusted identity-header boundary; do not expose the raw Worker publicly without equivalent authentication/authorization. See [current status](PROJECT_STATUS.md) and [deployment boundaries](docs/LOCAL_SETUP.md#what-is-portable-and-what-still-needs-adaptation).
 
-Verification for this increment: 32 tests pass, including real PDF/DOCX parsing, mixed and image-only PDFs, protected PDF rejection, provenance numbering, upload bounds and all 17 earlier checks. Typecheck and production build are also required before publication. Browser automation remains unavailable, so end-to-end interaction and hosted upload/download are not claimed as tested.
+## Repository and technical records
 
-Try the fictional files linked inside the upload dialog. They are not automatically added to the evaluation corpus. Use a new document ID such as TEST-TRAVEL and mark them synthetic.
+- [Repository/configuration audit](docs/REPOSITORY_AUDIT.md): tracked configuration, exclusions, required attribution and cleanup verification.
+- [Implementation history](docs/IMPLEMENTATION_HISTORY.md), [Windows verification history](docs/VERIFICATION_HISTORY.md) and [Git checkpoints](docs/GIT_CHECKPOINT.md): original increment details and accurate development provenance.
+- [Release checkpoint](docs/RELEASE_CHECKPOINT.md), [portability audit](docs/PORTABILITY_AUDIT.md) and [local backup verification](docs/LOCAL_TOOLS_VERIFICATION.md): checks tied to earlier snapshots, with their limits.
+- Source packaging: `pnpm.cmd export:source` for a clean committed checkout; `pnpm.cmd export:checkpoint` for a working-folder snapshot. See [export instructions](docs/LOCAL_SETUP.md#source-export). Source ZIPs exclude private uploads/reviews and are not data backups.
 
-## Local semantic retrieval experiment
-Keyword BM25 stays the default. Optional meaning-based retrieval now embeds queries and filtered document windows in a browser Web Worker. There are no external embedding calls, no LLM generation, and no provider key. The Site serves pinned Apache-2.0 MiniLM weights and a standalone Transformers.js runtime plus WASM; allowRemoteModels=false and explicit same-origin WASM paths prevent runtime model-provider fetches. Initial download is approximately 45 MB; cold loading and CPU inference can be slow. Browser cache availability varies. Native browser-worker WASM execution still requires user verification because browser automation is unavailable here. Errors and a three-minute timeout offer keyword fallback; switching mode cancels active work.
+## Development provenance and attribution
 
-Model: Xenova/all-MiniLM-L6-v2, revision 751bff37182d3f1213fa05d7196b954e230abad9, q8 ONNX, 384 dimensions, mean pooling, L2 normalization. Asset SHA-256 fingerprints and source/license metadata are in public/models/minilm/provenance.json. The standalone fully bundled transformers.min.js is used; transformers.web.min.js is intentionally not used because it retains bare runtime imports unsuitable for a static browser worker. Build preparation synchronizes vendor runtime/WASM versions with the installed package.
-
-Retrieval applies identical date/status/department filters before embedding. Long passages use 180-word windows with 32-word overlap; the maximum window cosine is the parent passage score. Full original evidence and provenance are retained for inspection. Limits: 500 windows per search, top 10 semantic candidates. Worker vectors cache only in memory; the worker is disposed when the library changes or the page unmounts. Model assets may be cached on device. Similarity is not confidence, support, policy interpretation, or a permission decision. No similarity abstention threshold is claimed. All six unsupported development probes produced semantic candidates, prominently disclosed in the UI.
-
-Evaluation is now 30 answerable development questions (original 12 plus 18 paraphrase, scope, exception and historical cases), with 6 separate unsupported probes. Each answerable question has one labelled passage. Only bundled synthetic documents are used. Saved results are in lib/retrieval-report.json and downloadable from the retrieval checks page. In the measured Node CPU run:
-
-| Method | Recall@1 | Recall@3 | Recall@5 | MRR | Unsupported probes with results |
-|---|---:|---:|---:|---:|---:|
-| BM25 | 60.0% | 70.0% | 70.0% | 0.650 | 2/6 |
-| Semantic | 90.0% | 100.0% | 100.0% | 0.939 | 6/6 |
-| RRF hybrid (fixed k=60, depth=20) | 70.0% | 93.3% | 100.0% | 0.826 | 6/6 |
-
-Semantic improved the development metrics and is retained as an optional experiment; hybrid underperformed semantic and is not exposed in the UI. These are development measurements, not held-out generalization evidence. The original 12 literal tests still achieve Recall@1/3/5=100% for BM25; the lower expanded baseline is not a regression on those queries. Node CPU runtime timing is not a browser performance benchmark. CPU and WASM quantization may produce small ranking differences. Retrieval from a large or real enterprise corpus is unvalidated. Held-out release evaluation remains pending.
-
-Reproduce after installing dependencies: `pnpm test` then `node scripts/evaluate-semantic.mjs`. This loads pinned local weights with no remote downloads, writes the report, and records method configuration and individual ranks. Model assets are checked in, not fetched during normal builds. The current suite has 40 tests covering the earlier ingestion checks, windowing, filter consistency, provenance retention, fusion, numerical dimensions, live-vs-saved keyword metrics and standalone asset configuration. Typecheck and production build are also run before publication.
-
-## Evidence-linked version comparison
-A new Version comparison view groups editions by document ID. Users explicitly choose Before and After versions; search date/status filters are deliberately not applied. All choices show approval state and effective date. Draft/archive comparisons and reverse-chronology selection have visible notices. The bundled Remote Work Policy v1.0 → v2.0 is the default example.
-
-The comparison algorithm normalizes CRLF and ignores a single final newline, then computes exact-line LCS after trimming common prefixes/suffixes. Case, punctuation and internal whitespace remain significant. A remaining span above 1,000,000 DP cells uses a labelled coarse deletion/addition fallback. Adjacent removed/added lines form an edited text block; moved text may appear as removal plus addition. No semantic or legal interpretation is inferred. Blank lines may appear in counts. Identical text can still have differing metadata or authority.
-
-Evidence retains original TXT line numbers, PDF physical pages plus extracted lines, or DOCX extracted paragraph ordinals. Clicking a line opens that exact version in the existing source inspector. PDF page wraps or DOCX extraction artifacts can create text differences; users should inspect original files. The UI previews up to 200 lines per side per block; the locally generated JSON export contains the full comparison, source references, selected version metadata, method, and limitations. No document data or diff is sent to an external service; no model is loaded for comparison.
-
-Verification: all 52 tests pass. The 12 new tests cover the bundled policy changes, reconstructing each input from the diff, newline normalization, significant whitespace, line positions after insertion, reverse direction, family/identity checks, bounded fallback, PDF/DOCX provenance, repeated lines, empty text, and 60 deterministic randomized sequence pairs. Existing 40 ingestion/retrieval checks remain green. Typecheck and production build are required before publication. Interactive browser comparison remains unverified in this execution environment.
-
-## Potential-conflict review (bounded, no model calls)
-The new Conflict review view compares two explicitly selected accessible documents. It offers a private library mode plus six fictional examples kept separate from the search corpus and retrieval evaluation. Checks cover explicit weekly remote-work maximums, domestic daily meal amounts in the same currency, incident reporting within minutes/hours (hours normalized to minutes), and explicit personal-cloud-storage permission/prohibition for customer data. Pattern descriptions are visible in the UI. Numeric vocabulary and scope parsing are intentionally narrow and English-only; each document is limited to 200 extracted constraints and 50 comparable pairs across the selection, with explicit errors above the limits. Evidence previews and export excerpts are bounded at 3,000 characters and link to the complete source.
-
-A differing matched value is classified for review using recorded effective periods, approval state, recognized explicit scope exclusions, selected date, conditions and deadline anchors. Categories: potential disagreement, historical change, draft/archived comparison, different explicit scope, outside review date, and context needed. Equal extracted values are inspectable but do not prove consistent conditions. No comparable pattern never means conflict-free. No document authority/precedence is inferred. Department is not used as employee applicability. Exceptions, PDF page context and unparsed wording may cause false positives/negatives. Source documents and human judgment remain necessary.
-
-Findings display the extracted values and cited passages from both documents, plus dates, status, scope excerpts and unknown authority. The source inspector retains TXT lines, PDF page/extracted lines or DOCX paragraph references. No embedding or generative model is invoked for this feature. The frontend computes candidates; it does not make legal/compliance determinations or silently resolve conflicts.
-
-Human assessments and notes (up to 3,000 characters) are persisted in conflict_reviews. The key is owner + unordered document pair + review date. GET/POST routes require the platform's user identity, verify access to both selected documents, and never use email as an owner key. Notes default to Needs review and are only saved on an explicit action. Signature changes in source content/applicability reset the displayed status to Needs review and show a stale notice. The current implementation stores the latest assessment, not an immutable review history. Saves require the revision loaded by the client; atomic database conditions reject competing writes with HTTP 409. The UI preserves the rejected draft for export and requires reloading before another save. Navigation/selection guards warn about unsaved notes; JSON exports mark unsaved state. Deleting an uploaded source removes related review records in the same D1 batch as its metadata deletion. File object deletion remains a separate storage operation, as documented earlier.
-
-The additive migration creates one review table and unique owner/pair/date index; document tables and baseline fixtures are unchanged. Synthetic example sources can be inspected but are not silently inserted into the main library. The example scenarios demonstrate overlap, historical cutoff, scope difference, draft status, equivalent units and conditional exception language.
-
-Verification: 75 tests pass (all earlier 52 plus 23 new conflict/review tests). New checks cover temporal boundaries, status exclusions, explicit scope, unknown scope, department non-inference, currency separation, unit conversion, exception and anchor uncertainty, negation, unsupported topics, source provenance, constraint limits, pair/signature symmetry and invalid review inputs. These are diagnostics, not an independent conflict-detection benchmark. Typecheck and production build are run before publication. Browser save/reload and private-account isolation still require end-to-end verification; service-only Site credentials do not impersonate a signed-in visitor and are not used to bypass owner checks.
+Developed by Mufeedh Ahmed with AI-assisted coding and review using OpenAI Codex, adapting an OpenAI Sites starter. Third-party model, parser, runtime and starter license notices are retained; [the repository audit](docs/REPOSITORY_AUDIT.md) lists them. A project-wide public-source license remains the author's decision before redistribution.
