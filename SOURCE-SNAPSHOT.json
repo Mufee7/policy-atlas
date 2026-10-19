@@ -1,0 +1,9 @@
+{
+  "commit": "98a3fa8b245cdfa15d7df52675757bae010ef23a",
+  "exportedAt": "2026-10-19T01:42:05.794Z",
+  "files": 180,
+  "uncompressedBytes": 48549914,
+  "hostingIdentityRemoved": true,
+  "runtimeDataIncluded": false,
+  "note": "Source checkpoint; see docs/LOCAL_SETUP.md. Public deployment outside Sites needs configured authentication and storage."
+}

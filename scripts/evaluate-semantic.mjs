@@ -1,0 +1,12 @@
+import {pipeline,env} from '@huggingface/transformers';
+import {writeFileSync} from 'node:fs';import {resolve} from 'node:path';import {performance} from 'node:perf_hooks';
+import core from '../.test-build/lib/core.js';import data from '../.test-build/lib/samples.js';import dev from '../.test-build/lib/development.js';import retrieval from '../.test-build/lib/retrieval.js';
+const {development,unsupported,metrics}=dev;const {samples}=data;
+env.allowRemoteModels=false;env.localModelPath=resolve('public/models')+'/';
+const start=performance.now();const model=await pipeline('feature-extraction','minilm',{dtype:'q8',device:'cpu',session_options:{intraOpNumThreads:1,interOpNumThreads:1}});const loadMs=performance.now()-start;const vectors=new Map();
+async function embed(text){if(vectors.has(text))return vectors.get(text);const result=await model(text,{pooling:'mean',normalize:true});const v=Array.from(result.data,Number);vectors.set(text,v);return v;}
+const passages=samples.flatMap(core.sections);for(const c of retrieval.embeddingChunks(passages))await embed(c.text);
+const rows=[];for(const q of [...development,...unsupported]){const begin=performance.now();const v=await embed(q.query);const rankings=retrieval.rankWithVectors(samples,q.query,{date:q.date,status:'approved'},v,vectors);const elapsedMs=performance.now()-begin;const out={...q,elapsedMs,methods:{}};for(const [method,hits]of Object.entries(rankings))out.methods[method]={ranks:q.expected.map(id=>hits.findIndex(h=>h.id===id)+1),top1:hits[0]?.id||null,returned:Math.min(hits.length,5)};rows.push(out);}
+const summary={};for(const method of ['keyword','semantic','hybrid'])summary[method]={...metrics(rows.filter(r=>r.expected.length).map(r=>r.methods[method])),unsupportedWithResults:rows.filter(r=>!r.expected.length&&r.methods[method].returned>0).length};
+const report={schemaVersion:1,model:'Xenova/all-MiniLM-L6-v2',revision:'751bff37182d3f1213fa05d7196b954e230abad9',dtype:'q8',dimensions:384,implementation:'Transformers.js 3.8.1; Node CPU inference; browser WASM performance not measured',date:new Date().toISOString(),loadMs,answerable:development.length,unsupported:unsupported.length,settings:{pooling:'mean',normalize:true,windowWords:180,overlapWords:32,rrfK:60,rrfDepth:20},summary,rows};
+writeFileSync('lib/retrieval-report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({loadMs,summary,rows:rows.map(r=>({id:r.id,q:r.query,keyword:r.methods.keyword.ranks,semantic:r.methods.semantic.ranks,hybrid:r.methods.hybrid.ranks}))},null,2));await model.dispose();

@@ -1,0 +1,17 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {samples,evaluation} from '../lib/samples.js';
+import {sections,search,tokenize,applicable,overlaps,validDate} from '../lib/core.js';
+test('section references preserve line ranges, whitespace separators and EOF',()=>{const p={...samples[0],content:'Heading\r\nbody\r\n  \r\n\r\nSecond\r\nlast'};const s=sections(p);assert.equal(s.length,2);assert.deepEqual(s.map(x=>[x.startLine,x.endLine]),[[1,2],[5,6]]);assert.equal(s[1].text,'Second\nlast')});
+test('VPN returns the full multiline rule',()=>{const h=search(samples,'VPN',{date:'2026-10-18',status:'approved'});assert.equal(h[0].policy.version,'2.0');assert.match(h[0].text,/when accessing company systems/);assert.equal(h[0].startLine,8)});
+test('blank and stopword-only queries return no hits',()=>{for(const q of ['','   ','the of'])assert.deepEqual(search(samples,q,{date:'2026-10-18',status:'approved'}),[])});
+test('search is case insensitive',()=>{assert.deepEqual(search(samples,'VPN',{date:'2026-10-18',status:'approved'}),search(samples,'vpn',{date:'2026-10-18',status:'approved'}))});
+test('historical dates select the older version and exclusive cutoff',()=>{assert.equal(search(samples,'VPN',{date:'2026-06-30',status:'approved'})[0].policy.version,'1.0');assert.equal(search(samples,'VPN',{date:'2026-07-01',status:'approved'})[0].policy.version,'2.0');assert.equal(applicable(samples[0],'2026-07-01','approved'),false)});
+test('drafts excluded by default but visible in explicit review mode',()=>{assert.equal(search(samples,'hardware',{date:'2026-10-18',status:'approved'}).length,0);assert.equal(search(samples,'hardware',{date:'2026-10-18',status:'draft'}).length,1)});
+test('department filters restrict results',()=>{assert.equal(search(samples,'VPN',{date:'2026-10-18',status:'approved',department:'Finance'}).length,0)});
+test('unmatched terms yield no evidence',()=>assert.equal(search(samples,'zygomatic',{date:'2026-10-18',status:'approved'}).length,0));
+test('tokenization retains negation without contraction fragments',()=>{assert.deepEqual(tokenize("employee's isn't don't"),['employee','not','not'])});
+test('overlapping applicable versions are flagged',()=>{assert.equal(overlaps(samples,'2026-10-18','approved').length,0);assert.equal(overlaps([...samples,{...samples[1],id:'duplicate'}],'2026-10-18','approved').length,1)});
+test('date validation rejects impossible calendar dates',()=>{assert.equal(validDate('2026-02-30'),false);assert.equal(validDate('2026-01-01'),true)});
+test('all development labels reference real source passages',()=>{const ids=new Set(samples.flatMap(sections).map(s=>s.id));for(const q of evaluation)for(const id of q.expected)assert.ok(ids.has(id),id)});
+const rows=evaluation.map(q=>{const hits=search(samples,q.query,{date:q.date,status:'approved'});const ranks=q.expected.map(id=>hits.findIndex(h=>h.id===id)+1);return{query:q.query,ranks}});console.log('Development evaluation (12 queries, synthetic samples only):',JSON.stringify({recall1:rows.reduce((a,r)=>a+r.ranks.filter(x=>x>0&&x<=1).length/r.ranks.length,0)/rows.length,recall3:rows.reduce((a,r)=>a+r.ranks.filter(x=>x>0&&x<=3).length/r.ranks.length,0)/rows.length,recall5:rows.reduce((a,r)=>a+r.ranks.filter(x=>x>0&&x<=5).length/r.ranks.length,0)/rows.length,mrr:rows.reduce((a,r)=>a+1/Math.min(...r.ranks.filter(x=>x>0),Infinity),0)/rows.length,rows}));

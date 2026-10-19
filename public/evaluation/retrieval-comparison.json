@@ -1,0 +1,1185 @@
+{
+  "schemaVersion": 1,
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "dtype": "q8",
+  "dimensions": 384,
+  "implementation": "Transformers.js 3.8.1; Node CPU inference; browser WASM performance not measured",
+  "date": "2026-10-18T16:42:49.864Z",
+  "loadMs": 496.696003,
+  "answerable": 30,
+  "unsupported": 6,
+  "settings": {
+    "pooling": "mean",
+    "normalize": true,
+    "windowWords": 180,
+    "overlapWords": 32,
+    "rrfK": 60,
+    "rrfDepth": 20
+  },
+  "summary": {
+    "keyword": {
+      "recall1": 0.6,
+      "recall3": 0.7,
+      "recall5": 0.7,
+      "mrr": 0.65,
+      "unsupportedWithResults": 2
+    },
+    "semantic": {
+      "recall1": 0.9,
+      "recall3": 1,
+      "recall5": 1,
+      "mrr": 0.9388888888888889,
+      "unsupportedWithResults": 6
+    },
+    "hybrid": {
+      "recall1": 0.7,
+      "recall3": 0.9333333333333333,
+      "recall5": 1,
+      "mrr": 0.826111111111111,
+      "unsupportedWithResults": 6
+    }
+  },
+  "rows": [
+    {
+      "query": "remote days manager approval",
+      "date": "2026-05-01",
+      "expected": [
+        "sample-remote-1:4"
+      ],
+      "id": "literal-1",
+      "category": "literal",
+      "elapsedMs": 9.04351399999996,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-1:4",
+          "returned": 5
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-1:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "remote days manager approval",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:4"
+      ],
+      "id": "literal-2",
+      "category": "literal",
+      "elapsedMs": 0.8093140000000858,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "VPN device",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:8"
+      ],
+      "id": "literal-3",
+      "category": "literal",
+      "elapsedMs": 5.225263000000041,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "multi-factor authentication",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:1"
+      ],
+      "id": "literal-4",
+      "category": "literal",
+      "elapsedMs": 4.688631000000214,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:1",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "incident reporting discovery",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:5"
+      ],
+      "id": "literal-5",
+      "category": "literal",
+      "elapsedMs": 6.410483000000113,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "personal cloud customer",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:9"
+      ],
+      "id": "literal-6",
+      "category": "literal",
+      "elapsedMs": 7.920353999999861,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:9",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:9",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:9",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "per diem",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:4"
+      ],
+      "id": "literal-7",
+      "category": "literal",
+      "elapsedMs": 3.502030999999988,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:4",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "expense claims receipts",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:8"
+      ],
+      "id": "literal-8",
+      "category": "literal",
+      "elapsedMs": 4.602035999999998,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:8",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:8",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:8",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "international travel approval",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:1"
+      ],
+      "id": "literal-9",
+      "category": "literal",
+      "elapsedMs": 3.4991549999999734,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:1",
+          "returned": 5
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "planned annual leave",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-leave-1:1"
+      ],
+      "id": "literal-10",
+      "category": "literal",
+      "elapsedMs": 4.347402999999986,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:1",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "sick leave illness",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-leave-1:5"
+      ],
+      "id": "literal-11",
+      "category": "literal",
+      "elapsedMs": 4.8839949999999135,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "query": "exceptions department head",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:12"
+      ],
+      "id": "literal-12",
+      "category": "literal",
+      "elapsedMs": 4.188699999999926,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:12",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:12",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:12",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-1",
+      "query": "Can I do my job from home?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:4"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 8.245407000000114,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-2",
+      "query": "Who signs off on working away from the office?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:4"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 6.099461000000019,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            3
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-3",
+      "query": "Are interns included in home working?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:1"
+      ],
+      "category": "scope",
+      "elapsedMs": 9.393657000000076,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:1",
+          "returned": 3
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-4",
+      "query": "What equipment and connection do I need when offsite?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:8"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 11.102388000000019,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-5",
+      "query": "Who can authorize more than three home-working days?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:12"
+      ],
+      "category": "exception",
+      "elapsedMs": 6.806317999999919,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "semantic": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-6",
+      "query": "Who do I tell if I spot a cyberattack?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:5"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 5.43442600000003,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-7",
+      "query": "How quickly must a suspected breach be escalated?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:5"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 19.792994000000135,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-8",
+      "query": "Is putting client details in my own Dropbox allowed?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:9"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 6.709839999999986,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:9",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:9",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-9",
+      "query": "Can I give a colleague my login secret?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:1"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 5.424007000000074,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-10",
+      "query": "Does signing into email require a second verification step?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-security-1:1"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 5.700227000000041,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:12",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-security-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:12",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-11",
+      "query": "How much may I spend on meals while on a domestic business trip?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:4"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 11.271543999999949,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-travel-1:1",
+          "returned": 4
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-travel-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-12",
+      "query": "Can I get money back for beer during a work trip?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:4"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 13.262699999999995,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-13",
+      "query": "When is the deadline to claim trip costs?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:8"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 5.786769999999933,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": "sample-remote-2:8",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:8",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            3
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-14",
+      "query": "Who must approve a journey abroad?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-travel-1:1"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 11.955375000000004,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": "sample-leave-1:1",
+          "returned": 4
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-travel-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            5
+          ],
+          "top1": "sample-leave-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-15",
+      "query": "How far ahead should I book time off?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-leave-1:1"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 6.579705999999987,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": "sample-remote-2:1",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            2
+          ],
+          "top1": "sample-remote-2:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-16",
+      "query": "What should I do if I'm too ill to start my shift?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-leave-1:5"
+      ],
+      "category": "paraphrase",
+      "elapsedMs": 10.96454400000016,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 1
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-17",
+      "query": "How many days can I work from home?",
+      "date": "2026-05-01",
+      "expected": [
+        "sample-remote-1:4"
+      ],
+      "category": "historical",
+      "elapsedMs": 6.632588999999825,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-1:4",
+          "returned": 3
+        },
+        "semantic": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            1
+          ],
+          "top1": "sample-remote-1:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "para-18",
+      "query": "Which staff categories are excluded from remote work?",
+      "date": "2026-10-18",
+      "expected": [
+        "sample-remote-2:1"
+      ],
+      "category": "scope",
+      "elapsedMs": 6.70308399999999,
+      "methods": {
+        "keyword": {
+          "ranks": [
+            0
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [
+            3
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [
+            4
+          ],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "unsupported-1",
+      "query": "What is the dental insurance allowance?",
+      "date": "2026-10-18",
+      "expected": [],
+      "category": "unsupported",
+      "elapsedMs": 3.3282540000000154,
+      "methods": {
+        "keyword": {
+          "ranks": [],
+          "top1": "sample-travel-1:4",
+          "returned": 2
+        },
+        "semantic": {
+          "ranks": [],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "unsupported-2",
+      "query": "How much does a senior engineer earn?",
+      "date": "2026-10-18",
+      "expected": [],
+      "category": "unsupported",
+      "elapsedMs": 3.2572589999999764,
+      "methods": {
+        "keyword": {
+          "ranks": [],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [],
+          "top1": "sample-remote-2:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [],
+          "top1": "sample-remote-2:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "unsupported-3",
+      "query": "How much paid maternity leave do employees receive?",
+      "date": "2026-10-18",
+      "expected": [],
+      "category": "unsupported",
+      "elapsedMs": 6.734778000000006,
+      "methods": {
+        "keyword": {
+          "ranks": [],
+          "top1": "sample-leave-1:1",
+          "returned": 5
+        },
+        "semantic": {
+          "ranks": [],
+          "top1": "sample-remote-2:1",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [],
+          "top1": "sample-leave-1:1",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "unsupported-4",
+      "query": "What is the pension contribution percentage?",
+      "date": "2026-10-18",
+      "expected": [],
+      "category": "unsupported",
+      "elapsedMs": 5.07220499999994,
+      "methods": {
+        "keyword": {
+          "ranks": [],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [],
+          "top1": "sample-travel-1:4",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "unsupported-5",
+      "query": "Which hospital should I visit for dengue treatment?",
+      "date": "2026-10-18",
+      "expected": [],
+      "category": "unsupported",
+      "elapsedMs": 4.865563999999949,
+      "methods": {
+        "keyword": {
+          "ranks": [],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [],
+          "top1": "sample-leave-1:5",
+          "returned": 5
+        }
+      }
+    },
+    {
+      "id": "unsupported-6",
+      "query": "What are the weekly cafeteria opening hours?",
+      "date": "2026-10-18",
+      "expected": [],
+      "category": "unsupported",
+      "elapsedMs": 5.069868999999926,
+      "methods": {
+        "keyword": {
+          "ranks": [],
+          "top1": null,
+          "returned": 0
+        },
+        "semantic": {
+          "ranks": [],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        },
+        "hybrid": {
+          "ranks": [],
+          "top1": "sample-remote-2:4",
+          "returned": 5
+        }
+      }
+    }
+  ]
+}

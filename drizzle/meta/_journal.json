@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792339394789,
+      "tag": "0000_naive_professor_monster",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792340711242,
+      "tag": "0001_wakeful_agent_brand",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792371604062,
+      "tag": "0002_classy_forgotten_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1792382847552,
+      "tag": "0003_easy_bruce_banner",
+      "breakpoints": true
+    }
+  ]
+}

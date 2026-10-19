@@ -1,0 +1,11 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import helpers from '../.test-build/lib/ingestion.js';
+import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs';
+import mammoth from 'mammoth/mammoth.browser.js';
+const {validateExtraction}=helpers;
+async function pdfUnits(name){const task=pdfjs.getDocument({data:new Uint8Array(readFileSync('public/samples/'+name)),useSystemFonts:true,stopAtErrors:true});try{const pdf=await task.promise;const units=[];for(let i=1;i<=pdf.numPages;i++){const page=await pdf.getPage(i);const data=await page.getTextContent();units.push({number:i,text:data.items.filter(x=>'str' in x).map(x=>x.str).join('\n')});}return units;}finally{await task.destroy();}}
+test('actual two-page PDF extraction finds policy and page-2 allowance',async()=>{const units=await pdfUnits('travel-policy.pdf');assert.equal(units.length,2);assert.match(units[1].text,/3,500/);assert.match(units[0].text,/manager approval/);assert.equal(validateExtraction({format:'pdf',units},'pdf').warnings.some(w=>w.includes('OCR')),false)});
+test('actual mixed PDF flags its image-only second page',async()=>{const units=await pdfUnits('mixed-scan.pdf');assert.equal(units.length,2);const e=validateExtraction({format:'pdf',units},'pdf');assert.ok(e.warnings.some(w=>w.includes('Page 2')&&w.includes('OCR')))});
+test('actual image-only PDF is rejected for insufficient text',async()=>{const units=await pdfUnits('image-only.pdf');assert.throws(()=>validateExtraction({format:'pdf',units},'pdf'),/OCR/)});
+test('actual encrypted PDF fails without a supplied password',async()=>{await assert.rejects(pdfUnits('protected.pdf'),e=>e.name==='PasswordException')});
+test('actual DOCX extraction retains body text and paragraph order',async()=>{const bytes=readFileSync('public/samples/access-policy.docx');const result=await mammoth.extractRawText({arrayBuffer:bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength)});assert.match(result.value,/service desk portal/);assert.ok(result.value.indexOf('Access Requests')<result.value.indexOf('Removal'));const units=result.value.replace(/\n\n$/,'').split(/\n\n/).map((text,i)=>({number:i+1,text}));assert.ok(validateExtraction({format:'docx',units},'docx').units.length>=5)});
