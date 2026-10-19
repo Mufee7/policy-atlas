@@ -19,8 +19,7 @@ for(const dir of checkpointRoots)if(existsSync(dir)){
  if(lstatSync(dir).isSymbolicLink())throw new Error('Checkpoint refuses symbolic links: '+dir);
  walk(dir);
 }
-if(existsSync('.openai')&&lstatSync('.openai').isSymbolicLink())throw new Error('Checkpoint refuses symbolic links: .openai');
-for(const name of [...checkpointRootFiles,'.openai/hosting.json'])if(existsSync(name))add(name);
+for(const name of checkpointRootFiles)if(existsSync(name))add(name);
 const previous=existsSync('SOURCE-SNAPSHOT.json')?JSON.parse(readFileSync('SOURCE-SNAPSHOT.json','utf8')):{};
 const {files}=prepareCheckpoint(source,previous);
 const archive=zipSync(files,{level:6});

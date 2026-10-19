@@ -38,6 +38,10 @@ pnpm.cmd dev
 
 A clean export/clone defaults to the portable execution profile. The original managed checkout has an ignored profile selection; do not copy `.sites-runtime` into your own project. The development script explicitly binds `127.0.0.1` on port 5173 by default; Vite config also uses loopback for both profiles. The built preview explicitly uses `--ip 127.0.0.1`. Do not override the host, expose a tunnel or forward ports for this release. Open the loopback URL printed in the terminal.
 
+## Local binding configuration
+
+`local-bindings.json` supplies the non-secret binding names `DB` and `BUCKET` to Vite. It replaces the former `.openai/hosting.json` contract; a local build no longer produces Sites metadata under `dist/.openai`. Do not change the binding names, emulator identifiers, `.wrangler/state` path or `local_seedy` owner merely to rename platform terminology: existing data depends on them. Retained Sites-named middleware still supplies loopback-only development sign-in; this is not real multi-user authentication. See [migration verification](LOCAL_CONFIG_MIGRATION.md).
+
 ## Windows launcher and local backups
 
 After installing dependencies, double-click `Policy-Atlas.cmd` in the project folder. Choose Start app, Back up local data, Restore local data, or Check setup. The launcher finds this workspace's portable Node automatically, otherwise uses Node on PATH. It requires Node 24 or newer. It builds if the Worker config is absent, applies local migrations, then starts the development server; keep its terminal open and use Ctrl+C to stop it. After source/dependency changes, run `pnpm.cmd build` yourself before starting again.

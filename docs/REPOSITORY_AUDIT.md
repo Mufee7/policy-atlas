@@ -9,6 +9,8 @@ Date: 2026-10-19. Starting checkpoint: `1803f72`, clean `main` working tree. Thi
 - The README's single **Development provenance and attribution** section acknowledges AI-assisted development and the starter origin. Technical identifiers, license notices and facts about evaluation authorship remain where needed; they are not marketing acknowledgments. No claim of unaided authorship was introduced.
 - Author credit, synthetic-data notices, no-generation/OCR limits, similarity-versus-support warnings, independent-evaluation gaps and security/deployment boundaries are retained. The original frozen evaluation was not rerun or relabelled.
 
+Subsequent configuration-only migration: [local-bindings.json](../local-bindings.json) now replaces the old manifest and obsolete Sites packaging hook. The findings below describe the earlier cleanup checkpoint; [the migration record](LOCAL_CONFIG_MIGRATION.md) documents the current contract.
+
 ## `.openai` and functional integration references
 
 The only tracked `.openai` file is `.openai/hosting.json`. Inspection found exactly `{"d1":"DB","r2":"BUCKET"}`: binding names, no service key or hosted project ID. Its path is part of the retained starter's configuration contract.

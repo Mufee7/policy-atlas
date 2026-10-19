@@ -67,11 +67,10 @@ next-env.d.ts
 # Project-local Windows development tools
 /.tools/
 
-# Credentials and private local data; only the non-secret binding manifest is source.
+# Credentials and private local data; local-bindings.json is non-secret source.
 /.aws/
 /.ssh/
-/.openai/*
-!/.openai/hosting.json
+/.openai/
 *.key
 *.pfx
 *.p12
