@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "split": "dev",
+  "cases": [
+    {
+      "id": "dev-01",
+      "answerable": true,
+      "supportIds": [
+        "dev-0-20:4"
+      ],
+      "requiredIds": [
+        "dev-0-20:1",
+        "dev-0-20:4",
+        "dev-0-20:7",
+        "dev-0-20:10",
+        "dev-0-20:13",
+        "dev-0-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-02",
+      "answerable": true,
+      "supportIds": [
+        "dev-0-10:10"
+      ],
+      "requiredIds": [
+        "dev-0-10:1",
+        "dev-0-10:4",
+        "dev-0-10:7",
+        "dev-0-10:10",
+        "dev-0-10:13",
+        "dev-0-10:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-03",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-04",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "ambiguous-evidence"
+      ],
+      "notes": "Two approved policies; no precedence supplied."
+    },
+    {
+      "id": "dev-05",
+      "answerable": true,
+      "supportIds": [
+        "dev-1-20:pdf:3"
+      ],
+      "requiredIds": [
+        "dev-1-20:pdf:1",
+        "dev-1-20:pdf:2",
+        "dev-1-20:pdf:3",
+        "dev-1-20:pdf:4",
+        "dev-1-20:pdf:5",
+        "dev-1-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-06",
+      "answerable": true,
+      "supportIds": [
+        "dev-1-20:pdf:1"
+      ],
+      "requiredIds": [
+        "dev-1-20:pdf:1",
+        "dev-1-20:pdf:2",
+        "dev-1-20:pdf:3",
+        "dev-1-20:pdf:4",
+        "dev-1-20:pdf:5",
+        "dev-1-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-07",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-08",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "No eligible department evidence."
+    },
+    {
+      "id": "dev-09",
+      "answerable": true,
+      "supportIds": [
+        "dev-2-20:docx:4"
+      ],
+      "requiredIds": [
+        "dev-2-20:docx:1",
+        "dev-2-20:docx:2",
+        "dev-2-20:docx:3",
+        "dev-2-20:docx:4",
+        "dev-2-20:docx:5",
+        "dev-2-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-10",
+      "answerable": true,
+      "supportIds": [
+        "dev-2-20:docx:5"
+      ],
+      "requiredIds": [
+        "dev-2-20:docx:1",
+        "dev-2-20:docx:2",
+        "dev-2-20:docx:3",
+        "dev-2-20:docx:4",
+        "dev-2-20:docx:5",
+        "dev-2-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-11",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-12",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "Unapproved proposals cannot support answers."
+    },
+    {
+      "id": "dev-13",
+      "answerable": true,
+      "supportIds": [
+        "dev-3-20:1"
+      ],
+      "requiredIds": [
+        "dev-3-20:1",
+        "dev-3-20:4",
+        "dev-3-20:7",
+        "dev-3-20:10",
+        "dev-3-20:13",
+        "dev-3-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-14",
+      "answerable": true,
+      "supportIds": [
+        "dev-3-20:4"
+      ],
+      "requiredIds": [
+        "dev-3-20:1",
+        "dev-3-20:4",
+        "dev-3-20:7",
+        "dev-3-20:10",
+        "dev-3-20:13",
+        "dev-3-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-15",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-16",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support"
+      ],
+      "notes": "A related quantity is not a deadline."
+    },
+    {
+      "id": "dev-17",
+      "answerable": true,
+      "supportIds": [
+        "dev-4-20:pdf:5"
+      ],
+      "requiredIds": [
+        "dev-4-20:pdf:1",
+        "dev-4-20:pdf:2",
+        "dev-4-20:pdf:3",
+        "dev-4-20:pdf:4",
+        "dev-4-20:pdf:5",
+        "dev-4-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-18",
+      "answerable": true,
+      "supportIds": [
+        "dev-4-10:pdf:3"
+      ],
+      "requiredIds": [
+        "dev-4-10:pdf:1",
+        "dev-4-10:pdf:2",
+        "dev-4-10:pdf:3",
+        "dev-4-10:pdf:4",
+        "dev-4-10:pdf:5",
+        "dev-4-10:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-19",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-20",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "ambiguous-evidence"
+      ],
+      "notes": "Two approved policies; no precedence supplied."
+    },
+    {
+      "id": "dev-21",
+      "answerable": true,
+      "supportIds": [
+        "dev-5-20:docx:2"
+      ],
+      "requiredIds": [
+        "dev-5-20:docx:1",
+        "dev-5-20:docx:2",
+        "dev-5-20:docx:3",
+        "dev-5-20:docx:4",
+        "dev-5-20:docx:5",
+        "dev-5-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-22",
+      "answerable": true,
+      "supportIds": [
+        "dev-5-20:docx:4"
+      ],
+      "requiredIds": [
+        "dev-5-20:docx:1",
+        "dev-5-20:docx:2",
+        "dev-5-20:docx:3",
+        "dev-5-20:docx:4",
+        "dev-5-20:docx:5",
+        "dev-5-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-23",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-24",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "No eligible department evidence."
+    },
+    {
+      "id": "dev-25",
+      "answerable": true,
+      "supportIds": [
+        "dev-6-20:7"
+      ],
+      "requiredIds": [
+        "dev-6-20:1",
+        "dev-6-20:4",
+        "dev-6-20:7",
+        "dev-6-20:10",
+        "dev-6-20:13",
+        "dev-6-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-26",
+      "answerable": true,
+      "supportIds": [
+        "dev-6-20:1"
+      ],
+      "requiredIds": [
+        "dev-6-20:1",
+        "dev-6-20:4",
+        "dev-6-20:7",
+        "dev-6-20:10",
+        "dev-6-20:13",
+        "dev-6-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-27",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-28",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "Unapproved proposals cannot support answers."
+    },
+    {
+      "id": "dev-29",
+      "answerable": true,
+      "supportIds": [
+        "dev-7-20:pdf:4"
+      ],
+      "requiredIds": [
+        "dev-7-20:pdf:1",
+        "dev-7-20:pdf:2",
+        "dev-7-20:pdf:3",
+        "dev-7-20:pdf:4",
+        "dev-7-20:pdf:5",
+        "dev-7-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-30",
+      "answerable": true,
+      "supportIds": [
+        "dev-7-20:pdf:5"
+      ],
+      "requiredIds": [
+        "dev-7-20:pdf:1",
+        "dev-7-20:pdf:2",
+        "dev-7-20:pdf:3",
+        "dev-7-20:pdf:4",
+        "dev-7-20:pdf:5",
+        "dev-7-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-31",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-32",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support"
+      ],
+      "notes": "A related quantity is not a deadline."
+    },
+    {
+      "id": "dev-33",
+      "answerable": true,
+      "supportIds": [
+        "dev-8-20:docx:1"
+      ],
+      "requiredIds": [
+        "dev-8-20:docx:1",
+        "dev-8-20:docx:2",
+        "dev-8-20:docx:3",
+        "dev-8-20:docx:4",
+        "dev-8-20:docx:5",
+        "dev-8-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-34",
+      "answerable": true,
+      "supportIds": [
+        "dev-8-10:docx:2"
+      ],
+      "requiredIds": [
+        "dev-8-10:docx:1",
+        "dev-8-10:docx:2",
+        "dev-8-10:docx:3",
+        "dev-8-10:docx:4",
+        "dev-8-10:docx:5",
+        "dev-8-10:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-35",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-36",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "ambiguous-evidence"
+      ],
+      "notes": "Two approved policies; no precedence supplied."
+    },
+    {
+      "id": "dev-37",
+      "answerable": true,
+      "supportIds": [
+        "dev-9-20:13"
+      ],
+      "requiredIds": [
+        "dev-9-20:1",
+        "dev-9-20:4",
+        "dev-9-20:7",
+        "dev-9-20:10",
+        "dev-9-20:13",
+        "dev-9-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-38",
+      "answerable": true,
+      "supportIds": [
+        "dev-9-20:7"
+      ],
+      "requiredIds": [
+        "dev-9-20:1",
+        "dev-9-20:4",
+        "dev-9-20:7",
+        "dev-9-20:10",
+        "dev-9-20:13",
+        "dev-9-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "dev-39",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "dev-40",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "No eligible department evidence."
+    }
+  ]
+}

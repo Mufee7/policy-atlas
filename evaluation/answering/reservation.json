@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "frozenAt": "2026-10-19T09:52:33.429Z",
+  "baselineCommit": "c2cfe5ef6757bbfc793dff953f68534c5ac923c4",
+  "protocolSha256": "05e5a2acd0f5cc600578bfa7f89e88da4fafc72e7323e2cfeb9986e950b649e4",
+  "counts": {
+    "development": 40,
+    "reserved": 40,
+    "reservedAnswerable": 20,
+    "reservedInsufficient": 20
+  },
+  "files": {
+    "work/answering-reserved/final.inputs.json": "6675f38ae6dbd805d6d10a4cc44cb71e938c357cf9f51a35a173ace4dc0e0088",
+    "work/answering-reserved/final.labels.json": "c84cdea9bdb3ad694b527aaf0664c1cf14a36d2568f5604290db4f6d1a6abc9b"
+  },
+  "independence": "Internally reserved synthetic templates; same coding agent authored fixtures and implementation. Final rows/labels not inspected or scored during tuning. Not independently authored external evaluation."
+}
