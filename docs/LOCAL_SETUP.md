@@ -36,7 +36,7 @@ pnpm.cmd dev
 
 `local:db` applies unapplied migrations to the local SQLite/D1 emulator under `.wrangler/state`. It always passes `--local`, uses a local-only generated config, and can be run again without replaying applied migrations. R2 file storage is emulated locally as well. It does not access the hosted database.
 
-A clean export/clone defaults to the portable execution profile. The original managed checkout has an ignored profile selection; do not copy `.sites-runtime` into your own project. The development script uses port 5173 by default. Open the loopback URL printed in the terminal.
+A clean export/clone defaults to the portable execution profile. The original managed checkout has an ignored profile selection; do not copy `.sites-runtime` into your own project. The development script explicitly binds `127.0.0.1` on port 5173 by default; Vite config also uses loopback for both profiles. The built preview explicitly uses `--ip 127.0.0.1`. Do not override the host, expose a tunnel or forward ports for this release. Open the loopback URL printed in the terminal.
 
 ## Windows launcher and local backups
 
@@ -66,6 +66,8 @@ Visit this URL as a normal top-level navigation:
 
 `http://localhost:5173/signin-with-chatgpt?return_to=/`
 
+**Single-user trust boundary:** development sign-in provides no real multi-user security. It uses one convenience identity, not a password-protected account. Loopback does not isolate other local users/processes with access to the machine or emulator files. Use a trusted personal Windows session; this is not enterprise production-ready.
+
 The portable development server creates a clearly local test identity (`Seedy`, `seedy@sites.test`), without a real ChatGPT login. This identity is development-only, guarded by loopback host/address checks, and excluded from the production build. If your server uses 127.0.0.1, use the same hostname consistently for sign-in and the app. Local mock sign-in does not exist in `pnpm start`'s built Worker preview; use `pnpm dev` for this flow.
 
 Use fictional documents. Local uploads and notes are independent of the hosted Site. The browser downloads model weights from your local app only when you select meaning-based search. The initial model/runtime transfer is about 45 MB; inference and embedding caches run on-device.
@@ -80,7 +82,7 @@ The app UI may retain the portfolio author's branding; the local test identity i
 
 ## Source export
 
-This exported working folder has no Git metadata. To package the current source with per-file SHA-256 hashes:
+The original exported folder had no Git metadata; this working project now has local Git history. For a working-folder source snapshot: To package the current source with per-file SHA-256 hashes:
 
 ```powershell
 pnpm.cmd export:checkpoint
@@ -120,7 +122,7 @@ To run one area, pass its spec, for example `pnpm.cmd test:browser semantic.spec
 
 See [RELEASE_CHECKPOINT.md](RELEASE_CHECKPOINT.md) for the combined release check and [VERIFICATION_HISTORY.md](VERIFICATION_HISTORY.md) for the earlier Windows checkpoints. The original Linux export audit remains in [PORTABILITY_AUDIT.md](PORTABILITY_AUDIT.md).
 
-This is a local portfolio prototype. A successful local run does not verify hosted authentication/account isolation, backups, alternative-host deployment, physical phones or every browser. Independent held-out retrieval evaluation and immutable review history remain future work. No paid model service is required.
+This is a single-user local portfolio prototype with no paid services or cloud resources. Public deployment is deferred; [deployment blockers](DEPLOYMENT_SECURITY_REVIEW.md) remain open. A successful local run does not verify hosted authentication/account isolation, recovery beyond the [recorded local backup checks](LOCAL_TOOLS_VERIFICATION.md), alternative-host deployment, physical phones or every browser. Complete the [bounded local release checklist](LOCAL_RELEASE_CHECKLIST.md) before portfolio handoff. Independent held-out retrieval evaluation and immutable review history remain future work. No paid model service is required.
 
 ## Troubleshooting
 

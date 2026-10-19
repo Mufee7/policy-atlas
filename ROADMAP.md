@@ -1,66 +1,38 @@
 # Policy Atlas roadmap
 
-The goal is an AI/ML engineering internship portfolio that demonstrates reproducible reasoning, learning and honest limitations. [PROJECT_STATUS.md](PROJECT_STATUS.md) is the authoritative current inventory. This roadmap orders remaining **original requirements**, not convenience additions. Keep the existing app working and all additional services free. No feature implementation or deployment is authorized by this document alone.
+Release target: a strong **single-user local Windows portfolio release**, with AI/ML learning alongside implementation. No paid services, cloud resources, public deployment or authentication project is required for this release. Preserve the working app and commit `4b0a43d` as the preceding checkpoint; no history rewrite. [PROJECT_STATUS.md](PROJECT_STATUS.md) remains the capability inventory.
+
+## 1. Completed milestone: bounded local release verification
+
+The [local release checklist](docs/LOCAL_RELEASE_CHECKLIST.md) is complete for the installed Windows environment: 26 distinct functional browser scenarios plus the isolated restored-app check passed, with test-harness failures and remaining limits recorded. The active library stayed unchanged. Reuse these gates after relevant changes, using fictional documents and an isolated restore destination. Close failures within existing behavior rather than adding features for breadth. Explicitly unsupported layouts or question types may remain limitations; inaccurate source references, lost notes, unusable recovery or unclear failure states may not be hidden behind passing software tests.
+
+Acceptance: default app listeners are loopback-only; one supported TXT/PDF/DOCX fixture each has inspected original-to-extraction fidelity; an answer, a refusal and a known false refusal are demonstrated honestly; comparison and both-source conflict review/save/refresh work; malformed/oversized uploads fail clearly; a stopped-server backup restores original bytes and review notes in isolation. Record commands, versions, actual results and unresolved limitations. Current historical evidence is linked in the checklist, not silently promoted to a new release run.
+
+Development sign-in is a convenience identity for one local operator, **not real multi-user security**. Other local processes/users with access to this session or state are outside the isolation claim. Do not use LAN binding, tunnels or port forwarding. The app is not enterprise production-ready. [Setup and trust boundary](docs/LOCAL_SETUP.md), [preserved deployment blockers](docs/DEPLOYMENT_SECURITY_REVIEW.md).
+
+## 2. Grounded-answer quality and honest evaluation
+
+The bounded extractive milestone is implemented. Preserve the [protocol](docs/ANSWERING_PROTOCOL.md), [all results/failures](docs/ANSWERING_RESULTS.md) and [Python learning exercise](docs/ANSWERING_LEARNING.md). Frozen implementation `5b6c60f` achieved 16/20 correct answerable, 0/20 unsupported and 20/20 correct refusals, with 96/96 valid citations on the once-run internally reserved final set. Four answerable paraphrases were falsely refused. This set is consumed; do not rerun it as a fresh benchmark or tune silently against it.
+
+Independent evaluation remains an original quality gap, not a requirement to invent a larger feature set before the local release. If a separate reviewer is available, use permission-cleared/fictional documents, group versions and near-duplicates into one split, record authorship/access, and reserve fresh labels outside implementer feedback. Freeze rubric/code before a final run and report every failure. Keep initial sample targets (at least 16/20 answerable, zero unsupported across 20 insufficient cases, complete citation integrity) explicitly sample-level. If no independent reviewer is available, retain the internal label and current limits rather than claiming independence.
+
+Any later question-language improvement uses new development cases and a new final set. Grounded answering and evidence quality take priority over convenience additions. Software tests, retrieval Recall@k/MRR and quotation existence are distinct from semantic answer correctness.
 
 <a id="next-milestone"></a>
 
-## 1. Grounded extractive answering ? bounded baseline implemented
+## 3. Recommended next milestone: local portfolio preparation
 
-The user authorized this milestone after reconciliation. Local Git baseline c2cfe5e, pre-implementation protocol/reservation 51fa082 and frozen implementation 5b6c60f are recorded. The working answerer, refusal view, verified quotations/context and offline Python evaluator are implemented. [Original protocol and targets](docs/ANSWERING_PROTOCOL.md), [all results/failures](docs/ANSWERING_RESULTS.md), [learning guide/exercise](docs/ANSWERING_LEARNING.md).
+1. Refresh the [README](README.md) around the verified local quick start, supported use cases, measured results and limitations; link existing operating/evaluation guides.
+2. Prepare one architecture walkthrough showing browser ingestion/extraction, BM25 and pretrained MiniLM retrieval, deterministic extractive selection/refusal, TypeScript APIs, emulated D1/R2 and local backup boundaries. Distinguish exact stored-text verification from original-file fidelity, rule-based conflicts from ML, and extractive output from generation.
+3. Record a short local demo with fictional data: upload/source, version/filter selection, correct answer plus citations, insufficient-evidence refusal, known false refusal, both-source conflict evidence and saved-note refresh. Explain the four failures and consumed evaluation honestly. Inspect the recording for private paths/data before sharing.
+4. Package reproducible source/setup instructions, results/error analysis and a concise learning narrative for the portfolio/resume. Retain attribution, development history and third-party licenses; resolve the author's project-license choice before public redistribution. No hosting or cloud account is needed to prepare these artifacts.
 
-One-shot internal final result: **16/20 correct answerable, 0/20 unsupported, 20/20 correct refusals, 96/96 valid citations**. Four answerable paraphrases were refused. Initial sample gates passed. Development contained 40 cases; final contained 40 separate cases, frozen before tuning with labels outside the application/development feedback loop. The final set is now **consumed**; implementation/evaluator were not tuned after feedback.
+## 4. Deferred original requirements, not local release gates
 
-The stronger original criterion of independently authored evaluation is **not met**: the same coding agent authored fixtures and code, and different source families share sentence templates. Do not call this an external independent benchmark or general reliability proof. Generated answering, broad semantic support and semantic-mode answer accuracy are still unverified/missing as described in [PROJECT_STATUS.md](PROJECT_STATUS.md).
+- **Public/shared deployment and authentication:** blocked by unverified identity headers, host bypass prevention and multi-account isolation. Preserve the full [security review](docs/DEPLOYMENT_SECURITY_REVIEW.md). No cloud resources, host selection or auth implementation now.
+- **Generated answering:** absent; retain extractive mode. Consider local inference only if a concrete use case justifies it after evidence/evaluation work. No paid model or provider key.
+- **Python/FastAPI:** the offline Python evaluator is real learning evidence; FastAPI/Pydantic/OpenAPI remain missing. A later narrow adapter needs a useful contract and tests, not a rewrite for technology breadth.
+- **Broader ingestion/conflict quality:** original-layout fidelity and independent conflict precision/recall remain bounded/unverified. No OCR, broad contradiction model, semantic/legal authority inference or immutable review history is claimed. Extend only in response to observed needs.
+- **Recovery at scale:** distributed D1/R2 transactions, power-loss guarantees, cross-version restore and hosted recovery remain outside this local release.
 
-### Recommended next milestone: independent evaluation and broader question coverage
-
-Keep grounded answering/evaluation ahead of generated answers and convenience features. No implementation of this follow-up is started here.
-
-1. Arrange annotation by a reviewer who does not tune the system, using less repetitive fictional or permission-cleared policies. Keep versions/near-duplicates in one split. Record authorship, access history, disagreements and licensing.
-2. Expand question-language handling using **new development cases**, including paraphrases, hard negatives, negation, exceptions, unrelated quantities and ambiguous authority. The consumed failures may inform development, but cannot remain final-test evidence for a new version. Preserve exact quotations, complete qualifications and distinct unavailable/refused states.
-3. Reserve a **fresh** 40-case final set (20 answerable/20 insufficient), with labels withheld from implementers. Fix rubric/thresholds before tuning, freeze code/configuration, then infer once. If independence cannot be demonstrated, label results internal/development and leave the criterion open.
-4. Retain initial sample gates: at least 16/20 correct answerable, 0/20 unsupported, 100% citation integrity and zero wrong-version/filter citations. Report all failures, coverage, support/completeness, Recall@k/MRR and uncertainty. Do not change targets after feedback. Human semantic review stays distinct from quote-existence checks.
-5. Preserve 100 software tests, seven Python evaluator tests, typecheck/build and existing browser flows. Follow [AGENTS.md](AGENTS.md) for browser runs. Publish raw predictions/error analysis and a learning note on precision/coverage and leakage. Keep services free and current UI/storage intact.
-
-Exit: separately authored, honestly bounded evaluation plus improved development coverage. If gates fail, retain failure and use another new reserved set for the next final claim. Software tests alone never establish answer accuracy.
-
-## 2. Evidence-grounded generated answering, if needed to finish the original answer requirement
-
-The original grounded-answer requirement can first be satisfied extractively. If authored natural-language synthesis remains part of the intended portfolio, implement it as a separate, explicitly generated mode only after the independent-evaluation follow-up in milestone 1. Assess free local inference feasibility on the available Windows hardware; record a no-generation outcome if infeasible rather than introducing a paid dependency.
-
-Gate generated outputs through evidence eligibility, claim-level citations and refusal. Evaluate unsupported claims, citation support/completeness, qualifiers, contradictory evidence, prompt injection in documents and missing evidence using a new reserved evaluation set. Compare against the extractive baseline, including failure cases and latency. Do not describe a deterministic quotation formatter as a generative model. No provider/model choice or download is made in this roadmap.
-
-## 3. Complete and evaluate the API boundary; add focused FastAPI learning
-
-Existing [document](app/api/documents/route.ts) and [review](app/api/conflict-reviews/route.ts) routes stay in place. Define typed search/answer API contracts, errors, filters, evidence IDs and refusal responses from the now-evaluated answer slice. Add request validation, authorization tests and reproducible examples.
-
-For the Python/FastAPI goal, implement a small FastAPI adapter/service for that concrete contract, with Pydantic models, OpenAPI and integration/parity tests against exported fixtures. First document how authenticated corpus data reaches it; never accept caller-supplied owner headers as proof of identity, duplicate live persistence without a migration plan, or rewrite the UI merely to claim another framework. Benchmark and document differences between Python and browser inference if both are used. Keep execution local/free.
-
-Exit: usable documented API, deterministic error/refusal semantics, filter/citation parity, two-user access tests at the chosen boundary, and a learning note on validation, async HTTP and storage ownership. This milestone is missing today; an existing TypeScript API is not FastAPI experience.
-
-## 4. Close original ingestion, comparison and conflict-quality gaps
-
-Use [the status matrix](PROJECT_STATUS.md#original-requirements-reconciled) and [verification history](docs/VERIFICATION_HISTORY.md) as the baseline instead of rebuilding these features.
-
-- Independently label additional PDF/DOCX layouts and check extraction fidelity, ordering and provenance against originals. Record unsupported layouts explicitly. OCR remains an optional scoped extension, not a silently assumed capability.
-- Verify the dedicated version-comparison browser view: selection/direction, draft/history notices, both-source navigation, coarse fallback and export. Distinguish textual change from semantic/legal change.
-- Evaluate the four supported conflict pattern families on new, independently labelled pairs, including hard negatives, exceptions, scope, currency and deadline anchors. Report precision/recall and abstention/unsupported-topic coverage by family. Keep the method labelled rule-based; no need to introduce ML solely for branding.
-- Add immutable review history or expand pattern coverage only when the original traceability requirement and observed errors justify it. Keep both-source evidence and human authority review.
-
-Exit: documented fidelity/quality results with error categories, the missing comparison UI evidence, and explicit supported-topic limits. Passing the existing pattern tests alone is insufficient.
-
-## 5. Storage, security and free deployment readiness
-
-Before any shared deployment, document a threat model covering identity-header trust, owner isolation, uploads/extraction trust, cross-origin writes, request/resource limits, document prompt injection if generation exists, logs and private data. Verify two separate accounts across list/download/upload/delete/review/search/answer flows. Resolve or explicitly handle D1/R2 partial failures, deletion races and recovery; decide whether server-side extraction validation is needed for the intended trust level.
-
-Build on [local setup](docs/LOCAL_SETUP.md), [local backup verification](docs/LOCAL_TOOLS_VERIFICATION.md) and [portability audit](docs/PORTABILITY_AUDIT.md). Test fresh-machine installation and restoration using synthetic data. Select a free deployment option only after verifying its current limits and authentication/storage suitability; use no paid keys or billable upgrade. If no suitable free host is available, deliver a reproducible local demo and record remote deployment as incomplete. Maintain local Git history and its [checkpoint provenance](docs/GIT_CHECKPOINT.md); no remote is required for local portfolio work.
-
-Exit: documented trusted identity boundary, passed account-isolation tests, deploy/recovery instructions, validated free-service constraints, and a verified deployed smoke test if deployment occurs. A local successful build is not deployment evidence. Do not expose the raw identity-trusting Worker publicly.
-
-## 6. Portfolio handoff
-
-Repository/branding cleanup on 2026-10-19 standardized Policy Atlas presentation and shortened the README, with original increment details retained in [implementation history](docs/IMPLEMENTATION_HISTORY.md). [The repository audit](docs/REPOSITORY_AUDIT.md) records preserved configuration/licenses, exclusions and checks. This does not close independent evaluation or deployment/security requirements; those remain higher priority than further visual polish.
-
-Prepare an architecture walkthrough, short demo, reproduction commands and an honest results/error-analysis page backed by the completed milestones. Explain pretrained ML inference, rule-based logic, extractive/generated modes and independent-evaluation protocol separately. Record dataset/model licenses and the author's project-license decision before public redistribution. Resume claims must match measured results; retain failed experiments and limitations.
-
-Convenience features and visual polish remain lower priority than grounded answers, refusal and independent evaluation. The bounded answering milestone is implemented; the **independent-evaluation follow-up in milestone 1 is the single recommended next action**, not work started now.
+[Verification history](docs/VERIFICATION_HISTORY.md), [portability audit](docs/PORTABILITY_AUDIT.md), [repository audit](docs/REPOSITORY_AUDIT.md) and [Git provenance](docs/GIT_CHECKPOINT.md) retain earlier work. This roadmap supersedes the former deployment-oriented ordering; it does not erase missing original requirements or evaluation limitations.

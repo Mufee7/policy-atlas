@@ -54,9 +54,8 @@ export default defineConfig(async ({ command }) => {
 
   return {
     server: {
-      ...(managedLinux
-        ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
-        : {}),
+      // Single-user local release: never expose the default dev server to a LAN.
+      host: "127.0.0.1",
       watch: {
         ignored: generatedWatchIgnore(),
         ...(isCodexSeatbeltSandbox ? { useFsEvents: false, usePolling: true } : {}),

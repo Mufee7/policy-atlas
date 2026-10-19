@@ -12,7 +12,7 @@ Policy Atlas makes policy evidence inspectable: find the relevant edition, read 
 - Evidence-linked version comparison and rule-based potential-conflict review with saved human assessments.
 - Owner-scoped document/review APIs, D1 metadata/text storage, R2 originals and local backup/restore tools.
 
-[PROJECT_STATUS.md](PROJECT_STATUS.md) is the authoritative capability and verification inventory. [ROADMAP.md](ROADMAP.md) orders remaining work, led by independently authored evaluation and broader question coverage.
+[PROJECT_STATUS.md](PROJECT_STATUS.md) is the authoritative capability and verification inventory. [ROADMAP.md](ROADMAP.md) orders the single-user local release checks, followed by architecture, demo and portfolio preparation. Public deployment is deferred; development sign-in provides no real multi-user security.
 
 ## Run locally on Windows
 

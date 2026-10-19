@@ -1,0 +1,17 @@
+# Deferred deployment security blockers
+
+Read-only review of checkpoint `4b0a43d`, 2026-10-19. Public/shared deployment is now deferred in favor of a single-user local release. Findings remain open; changing release scope does not fix them. No live hosted endpoint, host access policy, two-account adversarial test or new dependency/history security audit was performed.
+
+| Finding | Code evidence and verified behavior | Unverified protection / deployment blocker |
+|---|---|---|
+| Identity-header trust | [Documents](../app/api/documents/route.ts) and [reviews](../app/api/conflict-reviews/route.ts) accept nonempty `oai-authenticated-user-id`; [Worker](../build/sites-worker.ts) does not validate it. | Intended Sites proxy authentication, inbound header replacement and inaccessible backend/preview bypass paths are not proved by [.openai/hosting.json](../.openai/hosting.json), which only declares bindings. Never expose the raw Worker assuming header names authenticate callers. |
+| Owner isolation | List/download/delete/review queries are owner-scoped; review access resolves both documents. | All scopes depend on trustworthy identity. Two separate accounts have not been adversarially tested. |
+| Development sign-in | [Vite middleware](../build/sites-vite-plugin.ts) strips identity headers and checks loopback; dev-only hook. Existing 45-module production artifact scan found no mock identity/email/cookie markers. | Not a live production-route test. Mock cookie is a local convenience, not a password or multi-user security boundary. |
+| Downloads | Owner check before R2 lookup; attachment filename encoding, nosniff and private/no-store responses. | Bucket publicity/access settings not verified on any host. |
+| Writes and abuse | Origin mismatch rejected, metadata/file/extraction bounds and owner quotas exist. | Missing Origin accepted; no demonstrated complete CSRF design or rate limiting. Request parsing precedes some size checks; quotas are not atomic. |
+| Original-file fidelity | [Ingestion](../lib/ingestion.ts) validates file signatures/ZIP structure, unit numbering and text bounds. | PDF/DOCX text is supplied by the client, not independently matched to original bytes. Not malware scanning or full parsing validation. |
+| Recovery | Local backup/hash/isolated restore evidence exists. | Upload/delete spans D1 and R2 without a shared transaction. Partial failure, power-loss and hosted restore guarantees are absent. |
+| Errors and logging | Most API errors are generic; no obvious document/note-content console logging in app handlers. | Upload exception messages use an incomplete string filter. Existing generated Worker config enabled observability despite local Wrangler logging defaults; host logging/redaction/retention unverified. |
+| Secrets | Bounded scan of 239 tracked files found no common credential shapes; ignore rules exclude env/key/private/runtime paths. | Not a comprehensive secret-history scan, dependency advisory audit or certification. |
+
+Before any future shared deployment: verify signed identity (issuer, audience, signature and expiry) or prove an equivalent trusted ingress boundary, remove caller-supplied identity, close all alternate entry points, and exercise two-account list/download/delete/review isolation plus missing/forged credentials against the built Worker. Define upload/resource, CSRF, error/log and recovery policies for that environment. These tasks are **not** part of the current local milestone and no cloud resources are authorized.
