@@ -10,7 +10,7 @@ Implementation freeze: `5b6c60fe04101f3a1cc403c0b8b221f158abccbb`. The reserved 
 
 ## Actual Git state
 
-Executed `git status --short --branch` from `D:\Mufee\Projects\policy-atlas-source\policy-atlas`: exit 128, `fatal: not a git repository (or any of the parent directories): .git`. The workspace and inspected parent locations have no `.git` entry. Therefore HEAD, branch, index, remotes, staged/unstaged status and a Git diff cannot be recorded here. No new Git commit exists for this reconciliation. No `git init`, reset, clean, checkout or history rewrite was performed.
+Executed `git status --short --branch` from `<project-root>`: exit 128, `fatal: not a git repository (or any of the parent directories): .git`. The workspace and inspected parent locations have no `.git` entry. Therefore HEAD, branch, index, remotes, staged/unstaged status and a Git diff cannot be recorded here. No new Git commit exists for this reconciliation. No `git init`, reset, clean, checkout or history rewrite was performed.
 
 This records the missing Git checkpoint explicitly rather than treating source-export metadata as a live repository. Recovering the original repository or deliberately initializing local history is separate future work; the current application and all pre-existing modifications are preserved.
 
