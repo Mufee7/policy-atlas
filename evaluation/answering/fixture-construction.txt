@@ -1,0 +1,37 @@
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {createHash,randomInt} from 'node:crypto';
+const enc=x=>JSON.stringify(x,null,2)+'\n';const digest=x=>createHash('sha256').update(x).digest('hex');
+function makePolicy(topic,index,split,version='2.0'){
+ const id=`${split}-${index}-${version.replace('.','')}`,format=['txt','pdf','docx'][index%3];
+ const texts=[`1. Eligibility\nThe ${topic} policy applies only to permanent employees. Contractors and interns are excluded.`,`2. Allowance\nThe ${topic} limit is up to ${index+3} units per week. Written supervisor approval is required before use.`,`3. Deadline\nThe ${topic} deadline is within ${index+2} business days after receipt. Extensions require written director approval.`,`4. Approval\n${topic[0].toUpperCase()+topic.slice(1)} requires approval from the operations manager before booking. Emergency use requires additional director approval.`,`5. Requirements\nFor ${topic}, employees must use approved equipment and retain receipts. Personal equipment is prohibited.`,`6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.`];
+ const p={id,documentId:`${split.toUpperCase()}-${index}`,version,title:`${topic} policy`,department:'Operations',status:'approved',effectiveFrom:version==='1.0'?'2024-01-01':'2026-01-01',effectiveUntil:version==='1.0'?'2026-01-01':null,filename:`${id}.${format}`,content:texts.join('\n\n'),synthetic:true,format};
+ if(format!=='txt')p.extraction={format,units:texts.map((text,i)=>({number:i+1,text})),warnings:['Synthetic extracted-text answer fixture; not a parser test.']};
+ return p;
+}
+function refs(p){return Array.from({length:6},(_,i)=>p.extraction?`${p.id}:${p.format}:${i+1}`:`${p.id}:${i*3+1}`);}
+const intents=['limit','deadline','approval','eligibility','requirements'];
+const ask=(topic,intent)=>({limit:`What is the ${topic} limit?`,deadline:`What is the ${topic} deadline?`,approval:`Who approves ${topic}?`,eligibility:`Who is eligible for ${topic}?`,requirements:`What are the ${topic} requirements?`})[intent];
+const location={eligibility:0,limit:1,deadline:2,approval:3,requirements:4};
+function dataset(topics,split){const cases=[],labels=[];let n=0;
+ function add(input,label){const id=`${split}-${String(++n).padStart(2,'0')}`;cases.push({id,...input});labels.push({id,...label});}
+ topics.forEach((topic,i)=>{const current=makePolicy(topic,i,split),old=makePolicy(topic,i,split,'1.0');old.content=old.content.replace(`up to ${i+3}`,`up to ${i+1}`);if(old.extraction)old.extraction.units[1].text=old.extraction.units[1].text.replace(`up to ${i+3}`,`up to ${i+1}`);
+ const draft={...current,id:current.id+'-draft',version:'3.0-draft',status:'draft'};
+ for(let j=0;j<2;j++){const intent=intents[(i+j*2)%5],historical=i%4===0&&j===1,p=historical?old:current,options={date:historical?'2025-06-01':'2026-10-19',status:'approved',department:'Operations'};
+ let question=ask(topic,intent);
+ // Unseen free-form wording is genuinely answerable from the corpus, even if v1 refuses it.
+ if(split==='final'&&j===1&&randomInt(100)<35)question={limit:`How much ${topic} is permitted each week?`,deadline:`How long do we have to complete ${topic}?`,approval:`Whose permission is needed for ${topic}?`,eligibility:`Which staff can use ${topic}?`,requirements:`What equipment do I need for ${topic}?`}[intent];
+ add({question,options,policies:[current,old,draft],category:intent},{answerable:true,supportIds:[refs(p)[location[intent]]],requiredIds:refs(p),notes:'Complete source policy retained for qualifications; direct support must match requested relation.'});}
+ const options={date:'2026-10-19',status:'approved',department:'Operations'};
+ add({question:`What is the ${topic} insurance allowance?`,options,policies:[current,old,draft],category:'missing-fact'},{answerable:false,supportIds:[],requiredIds:[],allowedReasons:['no-support','unsupported-question'],notes:'No insurance entitlement is defined.'});
+ const variant=i%4;
+ if(variant===0){const competing={...current,id:current.id+'-competing',documentId:current.documentId+'-OTHER',content:current.content.replace(`up to ${i+3}`,`up to ${i+9}`)};if(current.extraction)competing.extraction={...current.extraction,units:current.extraction.units.map(u=>({...u,text:u.text.replace(`up to ${i+3}`,`up to ${i+9}`)}))};add({question:ask(topic,'limit'),options,policies:[current,competing],category:'ambiguous-authority'},{answerable:false,supportIds:[],requiredIds:[],allowedReasons:['ambiguous-evidence'],notes:'Two approved policies; no precedence supplied.'});}
+ else if(variant===1)add({question:ask(topic,'deadline'),options:{...options,department:'Finance'},policies:[current],category:'excluded-corpus'},{answerable:false,supportIds:[],requiredIds:[],allowedReasons:['no-eligible-evidence'],notes:'No eligible department evidence.'});
+ else if(variant===2)add({question:ask(topic,'approval'),options,policies:[draft],category:'draft-only'},{answerable:false,supportIds:[],requiredIds:[],allowedReasons:['no-eligible-evidence'],notes:'Unapproved proposals cannot support answers.'});
+ else {const p={...current,content:`1. ${topic}\nThe ${topic} deadline is not defined. The allowance is up to eight units per week.`,format:'txt',extraction:undefined};add({question:ask(topic,'deadline'),options,policies:[p],category:'related-but-undefined'},{answerable:false,supportIds:[],requiredIds:[],allowedReasons:['no-support'],notes:'A related quantity is not a deadline.'});}
+ });return{inputs:{schemaVersion:1,split,cases},labels:{schemaVersion:1,split,cases:labels}};}
+const dev=dataset(['equipment loans','course attendance','parking access','visitor badges','archive requests','lab bookings','stock orders','training grants','room reservations','service tickets'],'dev');
+const final=dataset(['field visits','printing credits','research access','uniform collection','vehicle reservations','journal purchases','simulation sessions','community events','exhibition entries','resource transfers'],'final');
+mkdirSync('evaluation/answering',{recursive:true});mkdirSync('work/answering-reserved',{recursive:true});
+for(const [file,value]of [['evaluation/answering/development.inputs.json',dev.inputs],['evaluation/answering/development.labels.json',dev.labels],['work/answering-reserved/final.inputs.json',final.inputs],['work/answering-reserved/final.labels.json',final.labels]])writeFileSync(file,enc(value),{flag:'wx'});
+const reservation={schemaVersion:1,frozenAt:new Date().toISOString(),baselineCommit:'c2cfe5ef6757bbfc793dff953f68534c5ac923c4',protocolSha256:digest(readFileSync('docs/ANSWERING_PROTOCOL.md')),counts:{development:40,reserved:40,reservedAnswerable:20,reservedInsufficient:20},files:Object.fromEntries(['work/answering-reserved/final.inputs.json','work/answering-reserved/final.labels.json'].map(p=>[p,digest(readFileSync(p))])),independence:'Internally reserved synthetic templates; same coding agent authored fixtures and implementation. Final rows/labels not inspected or scored during tuning. Not independently authored external evaluation.'};
+writeFileSync('evaluation/answering/reservation.json',enc(reservation),{flag:'wx'});console.log('Frozen 40 development + 40 reserved cases (20 answerable/20 insufficient). Only reservation hashes/counts emitted.');

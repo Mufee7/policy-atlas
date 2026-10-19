@@ -1,0 +1,2372 @@
+{
+  "schemaVersion": 1,
+  "method": "bounded-extractive-v1",
+  "retrieval": "keyword",
+  "cases": [
+    {
+      "id": "final-01",
+      "kind": "extractive",
+      "question": "What is the field visits limit?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-0-20:1",
+          "rowId": "final-0-20",
+          "documentId": "FINAL-0",
+          "version": "2.0",
+          "title": "field visits policy",
+          "quote": "1. Eligibility\nThe field visits policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "role": "context"
+        },
+        {
+          "passageId": "final-0-20:4",
+          "rowId": "final-0-20",
+          "documentId": "FINAL-0",
+          "version": "2.0",
+          "title": "field visits policy",
+          "quote": "2. Allowance\nThe field visits limit is up to 3 units per week. Written supervisor approval is required before use.",
+          "startLine": 4,
+          "endLine": 5,
+          "role": "support"
+        },
+        {
+          "passageId": "final-0-20:7",
+          "rowId": "final-0-20",
+          "documentId": "FINAL-0",
+          "version": "2.0",
+          "title": "field visits policy",
+          "quote": "3. Deadline\nThe field visits deadline is within 2 business days after receipt. Extensions require written director approval.",
+          "startLine": 7,
+          "endLine": 8,
+          "role": "context"
+        },
+        {
+          "passageId": "final-0-20:10",
+          "rowId": "final-0-20",
+          "documentId": "FINAL-0",
+          "version": "2.0",
+          "title": "field visits policy",
+          "quote": "4. Approval\nField visits requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 10,
+          "endLine": 11,
+          "role": "context"
+        },
+        {
+          "passageId": "final-0-20:13",
+          "rowId": "final-0-20",
+          "documentId": "FINAL-0",
+          "version": "2.0",
+          "title": "field visits policy",
+          "quote": "5. Requirements\nFor field visits, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 13,
+          "endLine": 14,
+          "role": "context"
+        },
+        {
+          "passageId": "final-0-20:16",
+          "rowId": "final-0-20",
+          "documentId": "FINAL-0",
+          "version": "2.0",
+          "title": "field visits policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 16,
+          "endLine": 17,
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-0-20:4",
+        "final-0-20:1",
+        "final-0-20:13",
+        "final-0-20:10",
+        "final-0-20:7"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-02",
+      "kind": "extractive",
+      "question": "Whose permission is needed for field visits?",
+      "options": {
+        "date": "2025-06-01",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-0-10:1",
+        "final-0-10:13",
+        "final-0-10:4",
+        "final-0-10:10",
+        "final-0-10:7"
+      ],
+      "decision": "refused",
+      "reason": "unsupported-question",
+      "message": "This question is outside the supported direct question forms. Inspect evidence or use a supported form; no answer has been inferred."
+    },
+    {
+      "id": "final-03",
+      "kind": "extractive",
+      "question": "What is the field visits insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-0-20:4",
+        "final-0-20:1",
+        "final-0-20:13",
+        "final-0-20:10",
+        "final-0-20:7"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-04",
+      "kind": "extractive",
+      "question": "What is the field visits limit?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-0-20-competing:4",
+        "final-0-20:4",
+        "final-0-20-competing:1",
+        "final-0-20:1",
+        "final-0-20-competing:13",
+        "final-0-20:13",
+        "final-0-20-competing:10",
+        "final-0-20-competing:7",
+        "final-0-20:10",
+        "final-0-20:7"
+      ],
+      "decision": "refused",
+      "reason": "ambiguous-evidence",
+      "message": "Multiple approved policies may support this topic. Authority or applicability needs human review; no answer was selected."
+    },
+    {
+      "id": "final-05",
+      "kind": "extractive",
+      "question": "What is the printing credits deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-1-20:pdf:1",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "1. Eligibility\nThe printing credits policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:2",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "2. Allowance\nThe printing credits limit is up to 4 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:3",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "3. Deadline\nThe printing credits deadline is within 3 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-1-20:pdf:4",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "4. Approval\nPrinting credits requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:5",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "5. Requirements\nFor printing credits, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:6",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-1-20:pdf:3",
+        "final-1-20:pdf:1",
+        "final-1-20:pdf:5",
+        "final-1-20:pdf:2",
+        "final-1-20:pdf:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-06",
+      "kind": "extractive",
+      "question": "Who is eligible for printing credits?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-1-20:pdf:1",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "1. Eligibility\nThe printing credits policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-1-20:pdf:2",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "2. Allowance\nThe printing credits limit is up to 4 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:3",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "3. Deadline\nThe printing credits deadline is within 3 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:4",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "4. Approval\nPrinting credits requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:5",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "5. Requirements\nFor printing credits, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-1-20:pdf:6",
+          "rowId": "final-1-20",
+          "documentId": "FINAL-1",
+          "version": "2.0",
+          "title": "printing credits policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-1-20:pdf:1",
+        "final-1-20:pdf:5",
+        "final-1-20:pdf:2",
+        "final-1-20:pdf:3",
+        "final-1-20:pdf:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-07",
+      "kind": "extractive",
+      "question": "What is the printing credits insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-1-20:pdf:2",
+        "final-1-20:pdf:1",
+        "final-1-20:pdf:5",
+        "final-1-20:pdf:3",
+        "final-1-20:pdf:4"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-08",
+      "kind": "extractive",
+      "question": "What is the printing credits deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Finance"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [],
+      "decision": "refused",
+      "reason": "no-eligible-evidence",
+      "message": "There is insufficient approved evidence under these date and department filters."
+    },
+    {
+      "id": "final-09",
+      "kind": "extractive",
+      "question": "Who approves research access?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-2-20:docx:1",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "1. Eligibility\nThe research access policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:2",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "2. Allowance\nThe research access limit is up to 5 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:3",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "3. Deadline\nThe research access deadline is within 4 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:4",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "4. Approval\nResearch access requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-2-20:docx:5",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "5. Requirements\nFor research access, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:6",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-2-20:docx:1",
+        "final-2-20:docx:5",
+        "final-2-20:docx:2",
+        "final-2-20:docx:3",
+        "final-2-20:docx:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-10",
+      "kind": "extractive",
+      "question": "What are the research access requirements?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-2-20:docx:1",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "1. Eligibility\nThe research access policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:2",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "2. Allowance\nThe research access limit is up to 5 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:3",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "3. Deadline\nThe research access deadline is within 4 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:4",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "4. Approval\nResearch access requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-2-20:docx:5",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "5. Requirements\nFor research access, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-2-20:docx:6",
+          "rowId": "final-2-20",
+          "documentId": "FINAL-2",
+          "version": "2.0",
+          "title": "research access policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-2-20:docx:5",
+        "final-2-20:docx:1",
+        "final-2-20:docx:2",
+        "final-2-20:docx:3",
+        "final-2-20:docx:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-11",
+      "kind": "extractive",
+      "question": "What is the research access insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-2-20:docx:2",
+        "final-2-20:docx:1",
+        "final-2-20:docx:5",
+        "final-2-20:docx:3",
+        "final-2-20:docx:4"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-12",
+      "kind": "extractive",
+      "question": "Who approves research access?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [],
+      "decision": "refused",
+      "reason": "no-eligible-evidence",
+      "message": "There is insufficient approved evidence under these date and department filters."
+    },
+    {
+      "id": "final-13",
+      "kind": "extractive",
+      "question": "Who is eligible for uniform collection?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-3-20:1",
+          "rowId": "final-3-20",
+          "documentId": "FINAL-3",
+          "version": "2.0",
+          "title": "uniform collection policy",
+          "quote": "1. Eligibility\nThe uniform collection policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "role": "support"
+        },
+        {
+          "passageId": "final-3-20:4",
+          "rowId": "final-3-20",
+          "documentId": "FINAL-3",
+          "version": "2.0",
+          "title": "uniform collection policy",
+          "quote": "2. Allowance\nThe uniform collection limit is up to 6 units per week. Written supervisor approval is required before use.",
+          "startLine": 4,
+          "endLine": 5,
+          "role": "context"
+        },
+        {
+          "passageId": "final-3-20:7",
+          "rowId": "final-3-20",
+          "documentId": "FINAL-3",
+          "version": "2.0",
+          "title": "uniform collection policy",
+          "quote": "3. Deadline\nThe uniform collection deadline is within 5 business days after receipt. Extensions require written director approval.",
+          "startLine": 7,
+          "endLine": 8,
+          "role": "context"
+        },
+        {
+          "passageId": "final-3-20:10",
+          "rowId": "final-3-20",
+          "documentId": "FINAL-3",
+          "version": "2.0",
+          "title": "uniform collection policy",
+          "quote": "4. Approval\nUniform collection requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 10,
+          "endLine": 11,
+          "role": "context"
+        },
+        {
+          "passageId": "final-3-20:13",
+          "rowId": "final-3-20",
+          "documentId": "FINAL-3",
+          "version": "2.0",
+          "title": "uniform collection policy",
+          "quote": "5. Requirements\nFor uniform collection, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 13,
+          "endLine": 14,
+          "role": "context"
+        },
+        {
+          "passageId": "final-3-20:16",
+          "rowId": "final-3-20",
+          "documentId": "FINAL-3",
+          "version": "2.0",
+          "title": "uniform collection policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 16,
+          "endLine": 17,
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-3-20:1",
+        "final-3-20:13",
+        "final-3-20:4",
+        "final-3-20:10",
+        "final-3-20:7"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-14",
+      "kind": "extractive",
+      "question": "How much uniform collection is permitted each week?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-3-20:4",
+        "final-3-20:1",
+        "final-3-20:13",
+        "final-3-20:10",
+        "final-3-20:7"
+      ],
+      "decision": "refused",
+      "reason": "unsupported-question",
+      "message": "This question is outside the supported direct question forms. Inspect evidence or use a supported form; no answer has been inferred."
+    },
+    {
+      "id": "final-15",
+      "kind": "extractive",
+      "question": "What is the uniform collection insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-3-20:4",
+        "final-3-20:1",
+        "final-3-20:13",
+        "final-3-20:10",
+        "final-3-20:7"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-16",
+      "kind": "extractive",
+      "question": "What is the uniform collection deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-3-20:1"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-17",
+      "kind": "extractive",
+      "question": "What are the vehicle reservations requirements?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-4-20:pdf:1",
+          "rowId": "final-4-20",
+          "documentId": "FINAL-4",
+          "version": "2.0",
+          "title": "vehicle reservations policy",
+          "quote": "1. Eligibility\nThe vehicle reservations policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-20:pdf:2",
+          "rowId": "final-4-20",
+          "documentId": "FINAL-4",
+          "version": "2.0",
+          "title": "vehicle reservations policy",
+          "quote": "2. Allowance\nThe vehicle reservations limit is up to 7 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-20:pdf:3",
+          "rowId": "final-4-20",
+          "documentId": "FINAL-4",
+          "version": "2.0",
+          "title": "vehicle reservations policy",
+          "quote": "3. Deadline\nThe vehicle reservations deadline is within 6 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-20:pdf:4",
+          "rowId": "final-4-20",
+          "documentId": "FINAL-4",
+          "version": "2.0",
+          "title": "vehicle reservations policy",
+          "quote": "4. Approval\nVehicle reservations requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-20:pdf:5",
+          "rowId": "final-4-20",
+          "documentId": "FINAL-4",
+          "version": "2.0",
+          "title": "vehicle reservations policy",
+          "quote": "5. Requirements\nFor vehicle reservations, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-4-20:pdf:6",
+          "rowId": "final-4-20",
+          "documentId": "FINAL-4",
+          "version": "2.0",
+          "title": "vehicle reservations policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-4-20:pdf:5",
+        "final-4-20:pdf:1",
+        "final-4-20:pdf:2",
+        "final-4-20:pdf:3",
+        "final-4-20:pdf:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-18",
+      "kind": "extractive",
+      "question": "What is the vehicle reservations deadline?",
+      "options": {
+        "date": "2025-06-01",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-4-10:pdf:1",
+          "rowId": "final-4-10",
+          "documentId": "FINAL-4",
+          "version": "1.0",
+          "title": "vehicle reservations policy",
+          "quote": "1. Eligibility\nThe vehicle reservations policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-10:pdf:2",
+          "rowId": "final-4-10",
+          "documentId": "FINAL-4",
+          "version": "1.0",
+          "title": "vehicle reservations policy",
+          "quote": "2. Allowance\nThe vehicle reservations limit is up to 5 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-10:pdf:3",
+          "rowId": "final-4-10",
+          "documentId": "FINAL-4",
+          "version": "1.0",
+          "title": "vehicle reservations policy",
+          "quote": "3. Deadline\nThe vehicle reservations deadline is within 6 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-4-10:pdf:4",
+          "rowId": "final-4-10",
+          "documentId": "FINAL-4",
+          "version": "1.0",
+          "title": "vehicle reservations policy",
+          "quote": "4. Approval\nVehicle reservations requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-10:pdf:5",
+          "rowId": "final-4-10",
+          "documentId": "FINAL-4",
+          "version": "1.0",
+          "title": "vehicle reservations policy",
+          "quote": "5. Requirements\nFor vehicle reservations, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-4-10:pdf:6",
+          "rowId": "final-4-10",
+          "documentId": "FINAL-4",
+          "version": "1.0",
+          "title": "vehicle reservations policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-4-10:pdf:3",
+        "final-4-10:pdf:1",
+        "final-4-10:pdf:5",
+        "final-4-10:pdf:2",
+        "final-4-10:pdf:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-19",
+      "kind": "extractive",
+      "question": "What is the vehicle reservations insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-4-20:pdf:2",
+        "final-4-20:pdf:1",
+        "final-4-20:pdf:5",
+        "final-4-20:pdf:3",
+        "final-4-20:pdf:4"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-20",
+      "kind": "extractive",
+      "question": "What is the vehicle reservations limit?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-4-20-competing:pdf:2",
+        "final-4-20:pdf:2",
+        "final-4-20-competing:pdf:1",
+        "final-4-20:pdf:1",
+        "final-4-20-competing:pdf:5",
+        "final-4-20:pdf:5",
+        "final-4-20-competing:pdf:3",
+        "final-4-20-competing:pdf:4",
+        "final-4-20:pdf:3",
+        "final-4-20:pdf:4"
+      ],
+      "decision": "refused",
+      "reason": "ambiguous-evidence",
+      "message": "Multiple approved policies may support this topic. Authority or applicability needs human review; no answer was selected."
+    },
+    {
+      "id": "final-21",
+      "kind": "extractive",
+      "question": "What is the journal purchases limit?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-5-20:docx:1",
+          "rowId": "final-5-20",
+          "documentId": "FINAL-5",
+          "version": "2.0",
+          "title": "journal purchases policy",
+          "quote": "1. Eligibility\nThe journal purchases policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-5-20:docx:2",
+          "rowId": "final-5-20",
+          "documentId": "FINAL-5",
+          "version": "2.0",
+          "title": "journal purchases policy",
+          "quote": "2. Allowance\nThe journal purchases limit is up to 8 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-5-20:docx:3",
+          "rowId": "final-5-20",
+          "documentId": "FINAL-5",
+          "version": "2.0",
+          "title": "journal purchases policy",
+          "quote": "3. Deadline\nThe journal purchases deadline is within 7 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-5-20:docx:4",
+          "rowId": "final-5-20",
+          "documentId": "FINAL-5",
+          "version": "2.0",
+          "title": "journal purchases policy",
+          "quote": "4. Approval\nJournal purchases requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-5-20:docx:5",
+          "rowId": "final-5-20",
+          "documentId": "FINAL-5",
+          "version": "2.0",
+          "title": "journal purchases policy",
+          "quote": "5. Requirements\nFor journal purchases, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-5-20:docx:6",
+          "rowId": "final-5-20",
+          "documentId": "FINAL-5",
+          "version": "2.0",
+          "title": "journal purchases policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-5-20:docx:2",
+        "final-5-20:docx:1",
+        "final-5-20:docx:5",
+        "final-5-20:docx:3",
+        "final-5-20:docx:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-22",
+      "kind": "extractive",
+      "question": "Whose permission is needed for journal purchases?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-5-20:docx:1",
+        "final-5-20:docx:5",
+        "final-5-20:docx:2",
+        "final-5-20:docx:3",
+        "final-5-20:docx:4"
+      ],
+      "decision": "refused",
+      "reason": "unsupported-question",
+      "message": "This question is outside the supported direct question forms. Inspect evidence or use a supported form; no answer has been inferred."
+    },
+    {
+      "id": "final-23",
+      "kind": "extractive",
+      "question": "What is the journal purchases insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-5-20:docx:2",
+        "final-5-20:docx:1",
+        "final-5-20:docx:5",
+        "final-5-20:docx:3",
+        "final-5-20:docx:4"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-24",
+      "kind": "extractive",
+      "question": "What is the journal purchases deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Finance"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [],
+      "decision": "refused",
+      "reason": "no-eligible-evidence",
+      "message": "There is insufficient approved evidence under these date and department filters."
+    },
+    {
+      "id": "final-25",
+      "kind": "extractive",
+      "question": "What is the simulation sessions deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-6-20:1",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "1. Eligibility\nThe simulation sessions policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:4",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "2. Allowance\nThe simulation sessions limit is up to 9 units per week. Written supervisor approval is required before use.",
+          "startLine": 4,
+          "endLine": 5,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:7",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "3. Deadline\nThe simulation sessions deadline is within 8 business days after receipt. Extensions require written director approval.",
+          "startLine": 7,
+          "endLine": 8,
+          "role": "support"
+        },
+        {
+          "passageId": "final-6-20:10",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "4. Approval\nSimulation sessions requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 10,
+          "endLine": 11,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:13",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "5. Requirements\nFor simulation sessions, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 13,
+          "endLine": 14,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:16",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 16,
+          "endLine": 17,
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-6-20:7",
+        "final-6-20:1",
+        "final-6-20:13",
+        "final-6-20:4",
+        "final-6-20:10"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-26",
+      "kind": "extractive",
+      "question": "Who is eligible for simulation sessions?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-6-20:1",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "1. Eligibility\nThe simulation sessions policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "role": "support"
+        },
+        {
+          "passageId": "final-6-20:4",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "2. Allowance\nThe simulation sessions limit is up to 9 units per week. Written supervisor approval is required before use.",
+          "startLine": 4,
+          "endLine": 5,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:7",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "3. Deadline\nThe simulation sessions deadline is within 8 business days after receipt. Extensions require written director approval.",
+          "startLine": 7,
+          "endLine": 8,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:10",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "4. Approval\nSimulation sessions requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 10,
+          "endLine": 11,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:13",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "5. Requirements\nFor simulation sessions, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 13,
+          "endLine": 14,
+          "role": "context"
+        },
+        {
+          "passageId": "final-6-20:16",
+          "rowId": "final-6-20",
+          "documentId": "FINAL-6",
+          "version": "2.0",
+          "title": "simulation sessions policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 16,
+          "endLine": 17,
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-6-20:1",
+        "final-6-20:13",
+        "final-6-20:4",
+        "final-6-20:10",
+        "final-6-20:7"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-27",
+      "kind": "extractive",
+      "question": "What is the simulation sessions insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-6-20:4",
+        "final-6-20:1",
+        "final-6-20:13",
+        "final-6-20:10",
+        "final-6-20:7"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-28",
+      "kind": "extractive",
+      "question": "Who approves simulation sessions?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [],
+      "decision": "refused",
+      "reason": "no-eligible-evidence",
+      "message": "There is insufficient approved evidence under these date and department filters."
+    },
+    {
+      "id": "final-29",
+      "kind": "extractive",
+      "question": "Who approves community events?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-7-20:pdf:1",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "1. Eligibility\nThe community events policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:2",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "2. Allowance\nThe community events limit is up to 10 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:3",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "3. Deadline\nThe community events deadline is within 9 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:4",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "4. Approval\nCommunity events requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-7-20:pdf:5",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "5. Requirements\nFor community events, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:6",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-7-20:pdf:1",
+        "final-7-20:pdf:5",
+        "final-7-20:pdf:2",
+        "final-7-20:pdf:3",
+        "final-7-20:pdf:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-30",
+      "kind": "extractive",
+      "question": "What are the community events requirements?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-7-20:pdf:1",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "1. Eligibility\nThe community events policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:2",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "2. Allowance\nThe community events limit is up to 10 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:3",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "3. Deadline\nThe community events deadline is within 9 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:4",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "4. Approval\nCommunity events requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-7-20:pdf:5",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "5. Requirements\nFor community events, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-7-20:pdf:6",
+          "rowId": "final-7-20",
+          "documentId": "FINAL-7",
+          "version": "2.0",
+          "title": "community events policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "pdf",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-7-20:pdf:5",
+        "final-7-20:pdf:1",
+        "final-7-20:pdf:2",
+        "final-7-20:pdf:3",
+        "final-7-20:pdf:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-31",
+      "kind": "extractive",
+      "question": "What is the community events insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-7-20:pdf:2",
+        "final-7-20:pdf:1",
+        "final-7-20:pdf:5",
+        "final-7-20:pdf:3",
+        "final-7-20:pdf:4"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-32",
+      "kind": "extractive",
+      "question": "What is the community events deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-7-20:1"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-33",
+      "kind": "extractive",
+      "question": "Who is eligible for exhibition entries?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-8-20:docx:1",
+          "rowId": "final-8-20",
+          "documentId": "FINAL-8",
+          "version": "2.0",
+          "title": "exhibition entries policy",
+          "quote": "1. Eligibility\nThe exhibition entries policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-8-20:docx:2",
+          "rowId": "final-8-20",
+          "documentId": "FINAL-8",
+          "version": "2.0",
+          "title": "exhibition entries policy",
+          "quote": "2. Allowance\nThe exhibition entries limit is up to 11 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-20:docx:3",
+          "rowId": "final-8-20",
+          "documentId": "FINAL-8",
+          "version": "2.0",
+          "title": "exhibition entries policy",
+          "quote": "3. Deadline\nThe exhibition entries deadline is within 10 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-20:docx:4",
+          "rowId": "final-8-20",
+          "documentId": "FINAL-8",
+          "version": "2.0",
+          "title": "exhibition entries policy",
+          "quote": "4. Approval\nExhibition entries requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-20:docx:5",
+          "rowId": "final-8-20",
+          "documentId": "FINAL-8",
+          "version": "2.0",
+          "title": "exhibition entries policy",
+          "quote": "5. Requirements\nFor exhibition entries, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-20:docx:6",
+          "rowId": "final-8-20",
+          "documentId": "FINAL-8",
+          "version": "2.0",
+          "title": "exhibition entries policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-8-20:docx:1",
+        "final-8-20:docx:5",
+        "final-8-20:docx:2",
+        "final-8-20:docx:3",
+        "final-8-20:docx:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-34",
+      "kind": "extractive",
+      "question": "What is the exhibition entries limit?",
+      "options": {
+        "date": "2025-06-01",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-8-10:docx:1",
+          "rowId": "final-8-10",
+          "documentId": "FINAL-8",
+          "version": "1.0",
+          "title": "exhibition entries policy",
+          "quote": "1. Eligibility\nThe exhibition entries policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 1,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-10:docx:2",
+          "rowId": "final-8-10",
+          "documentId": "FINAL-8",
+          "version": "1.0",
+          "title": "exhibition entries policy",
+          "quote": "2. Allowance\nThe exhibition entries limit is up to 9 units per week. Written supervisor approval is required before use.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 2,
+            "start": 1,
+            "end": 2
+          },
+          "role": "support"
+        },
+        {
+          "passageId": "final-8-10:docx:3",
+          "rowId": "final-8-10",
+          "documentId": "FINAL-8",
+          "version": "1.0",
+          "title": "exhibition entries policy",
+          "quote": "3. Deadline\nThe exhibition entries deadline is within 10 business days after receipt. Extensions require written director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 3,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-10:docx:4",
+          "rowId": "final-8-10",
+          "documentId": "FINAL-8",
+          "version": "1.0",
+          "title": "exhibition entries policy",
+          "quote": "4. Approval\nExhibition entries requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 4,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-10:docx:5",
+          "rowId": "final-8-10",
+          "documentId": "FINAL-8",
+          "version": "1.0",
+          "title": "exhibition entries policy",
+          "quote": "5. Requirements\nFor exhibition entries, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 5,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        },
+        {
+          "passageId": "final-8-10:docx:6",
+          "rowId": "final-8-10",
+          "documentId": "FINAL-8",
+          "version": "1.0",
+          "title": "exhibition entries policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 1,
+          "endLine": 2,
+          "source": {
+            "kind": "docx",
+            "number": 6,
+            "start": 1,
+            "end": 2
+          },
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-8-10:docx:2",
+        "final-8-10:docx:1",
+        "final-8-10:docx:5",
+        "final-8-10:docx:3",
+        "final-8-10:docx:4"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-35",
+      "kind": "extractive",
+      "question": "What is the exhibition entries insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-8-20:docx:2",
+        "final-8-20:docx:1",
+        "final-8-20:docx:5",
+        "final-8-20:docx:3",
+        "final-8-20:docx:4"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-36",
+      "kind": "extractive",
+      "question": "What is the exhibition entries limit?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-8-20-competing:docx:2",
+        "final-8-20:docx:2",
+        "final-8-20-competing:docx:1",
+        "final-8-20:docx:1",
+        "final-8-20-competing:docx:5",
+        "final-8-20:docx:5",
+        "final-8-20-competing:docx:3",
+        "final-8-20-competing:docx:4",
+        "final-8-20:docx:3",
+        "final-8-20:docx:4"
+      ],
+      "decision": "refused",
+      "reason": "ambiguous-evidence",
+      "message": "Multiple approved policies may support this topic. Authority or applicability needs human review; no answer was selected."
+    },
+    {
+      "id": "final-37",
+      "kind": "extractive",
+      "question": "What are the resource transfers requirements?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [
+        {
+          "passageId": "final-9-20:1",
+          "rowId": "final-9-20",
+          "documentId": "FINAL-9",
+          "version": "2.0",
+          "title": "resource transfers policy",
+          "quote": "1. Eligibility\nThe resource transfers policy applies only to permanent employees. Contractors and interns are excluded.",
+          "startLine": 1,
+          "endLine": 2,
+          "role": "context"
+        },
+        {
+          "passageId": "final-9-20:4",
+          "rowId": "final-9-20",
+          "documentId": "FINAL-9",
+          "version": "2.0",
+          "title": "resource transfers policy",
+          "quote": "2. Allowance\nThe resource transfers limit is up to 12 units per week. Written supervisor approval is required before use.",
+          "startLine": 4,
+          "endLine": 5,
+          "role": "context"
+        },
+        {
+          "passageId": "final-9-20:7",
+          "rowId": "final-9-20",
+          "documentId": "FINAL-9",
+          "version": "2.0",
+          "title": "resource transfers policy",
+          "quote": "3. Deadline\nThe resource transfers deadline is within 11 business days after receipt. Extensions require written director approval.",
+          "startLine": 7,
+          "endLine": 8,
+          "role": "context"
+        },
+        {
+          "passageId": "final-9-20:10",
+          "rowId": "final-9-20",
+          "documentId": "FINAL-9",
+          "version": "2.0",
+          "title": "resource transfers policy",
+          "quote": "4. Approval\nResource transfers requires approval from the operations manager before booking. Emergency use requires additional director approval.",
+          "startLine": 10,
+          "endLine": 11,
+          "role": "context"
+        },
+        {
+          "passageId": "final-9-20:13",
+          "rowId": "final-9-20",
+          "documentId": "FINAL-9",
+          "version": "2.0",
+          "title": "resource transfers policy",
+          "quote": "5. Requirements\nFor resource transfers, employees must use approved equipment and retain receipts. Personal equipment is prohibited.",
+          "startLine": 13,
+          "endLine": 14,
+          "role": "support"
+        },
+        {
+          "passageId": "final-9-20:16",
+          "rowId": "final-9-20",
+          "documentId": "FINAL-9",
+          "version": "2.0",
+          "title": "resource transfers policy",
+          "quote": "6. Exceptions\nThese rules do not authorize use outside the employee's recorded assignment. Exceptions require both manager and compliance approval.",
+          "startLine": 16,
+          "endLine": 17,
+          "role": "context"
+        }
+      ],
+      "rankedIds": [
+        "final-9-20:13",
+        "final-9-20:1",
+        "final-9-20:4",
+        "final-9-20:10",
+        "final-9-20:7"
+      ],
+      "decision": "answered",
+      "reason": "explicit-evidence",
+      "message": "Exact source quotations follow. Read all context, including exclusions and approval conditions. This is not generated advice or a personalized permission decision."
+    },
+    {
+      "id": "final-38",
+      "kind": "extractive",
+      "question": "How long do we have to complete resource transfers?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-9-20:1",
+        "final-9-20:13",
+        "final-9-20:4",
+        "final-9-20:10",
+        "final-9-20:7"
+      ],
+      "decision": "refused",
+      "reason": "unsupported-question",
+      "message": "This question is outside the supported direct question forms. Inspect evidence or use a supported form; no answer has been inferred."
+    },
+    {
+      "id": "final-39",
+      "kind": "extractive",
+      "question": "What is the resource transfers insurance allowance?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Operations"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [
+        "final-9-20:4",
+        "final-9-20:1",
+        "final-9-20:13",
+        "final-9-20:10",
+        "final-9-20:7"
+      ],
+      "decision": "refused",
+      "reason": "no-support",
+      "message": "The retrieved evidence does not explicitly support this requested fact. Similarity or shared words alone are insufficient."
+    },
+    {
+      "id": "final-40",
+      "kind": "extractive",
+      "question": "What is the resource transfers deadline?",
+      "options": {
+        "date": "2026-10-19",
+        "status": "approved",
+        "department": "Finance"
+      },
+      "method": "bounded-extractive-v1",
+      "retrieval": "keyword",
+      "citations": [],
+      "rankedIds": [],
+      "decision": "refused",
+      "reason": "no-eligible-evidence",
+      "message": "There is insufficient approved evidence under these date and department filters."
+    }
+  ]
+}

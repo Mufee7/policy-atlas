@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "implementationCommit": "5b6c60fe04101f3a1cc403c0b8b221f158abccbb",
+  "frozenFileHashesUnchanged": true,
+  "reservedPublishedHashesMatch": true,
+  "offlineRescoreIdentical": true,
+  "finalInferenceRuns": 1,
+  "repeatGuard": "EEXIST before inference",
+  "documentationFileTargetsExist": true,
+  "reportSha256": "a6efbb2fc6750eee4f46b7e9fef8fb9c6998830925f296ed465ef1319682e42b",
+  "baselineCommit": "c2cfe5ef6757bbfc793dff953f68534c5ac923c4",
+  "noPushOrDeployment": true
+}

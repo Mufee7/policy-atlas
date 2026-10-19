@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "split": "final",
+  "cases": [
+    {
+      "id": "final-01",
+      "answerable": true,
+      "supportIds": [
+        "final-0-20:4"
+      ],
+      "requiredIds": [
+        "final-0-20:1",
+        "final-0-20:4",
+        "final-0-20:7",
+        "final-0-20:10",
+        "final-0-20:13",
+        "final-0-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-02",
+      "answerable": true,
+      "supportIds": [
+        "final-0-10:10"
+      ],
+      "requiredIds": [
+        "final-0-10:1",
+        "final-0-10:4",
+        "final-0-10:7",
+        "final-0-10:10",
+        "final-0-10:13",
+        "final-0-10:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-03",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-04",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "ambiguous-evidence"
+      ],
+      "notes": "Two approved policies; no precedence supplied."
+    },
+    {
+      "id": "final-05",
+      "answerable": true,
+      "supportIds": [
+        "final-1-20:pdf:3"
+      ],
+      "requiredIds": [
+        "final-1-20:pdf:1",
+        "final-1-20:pdf:2",
+        "final-1-20:pdf:3",
+        "final-1-20:pdf:4",
+        "final-1-20:pdf:5",
+        "final-1-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-06",
+      "answerable": true,
+      "supportIds": [
+        "final-1-20:pdf:1"
+      ],
+      "requiredIds": [
+        "final-1-20:pdf:1",
+        "final-1-20:pdf:2",
+        "final-1-20:pdf:3",
+        "final-1-20:pdf:4",
+        "final-1-20:pdf:5",
+        "final-1-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-07",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-08",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "No eligible department evidence."
+    },
+    {
+      "id": "final-09",
+      "answerable": true,
+      "supportIds": [
+        "final-2-20:docx:4"
+      ],
+      "requiredIds": [
+        "final-2-20:docx:1",
+        "final-2-20:docx:2",
+        "final-2-20:docx:3",
+        "final-2-20:docx:4",
+        "final-2-20:docx:5",
+        "final-2-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-10",
+      "answerable": true,
+      "supportIds": [
+        "final-2-20:docx:5"
+      ],
+      "requiredIds": [
+        "final-2-20:docx:1",
+        "final-2-20:docx:2",
+        "final-2-20:docx:3",
+        "final-2-20:docx:4",
+        "final-2-20:docx:5",
+        "final-2-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-11",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-12",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "Unapproved proposals cannot support answers."
+    },
+    {
+      "id": "final-13",
+      "answerable": true,
+      "supportIds": [
+        "final-3-20:1"
+      ],
+      "requiredIds": [
+        "final-3-20:1",
+        "final-3-20:4",
+        "final-3-20:7",
+        "final-3-20:10",
+        "final-3-20:13",
+        "final-3-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-14",
+      "answerable": true,
+      "supportIds": [
+        "final-3-20:4"
+      ],
+      "requiredIds": [
+        "final-3-20:1",
+        "final-3-20:4",
+        "final-3-20:7",
+        "final-3-20:10",
+        "final-3-20:13",
+        "final-3-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-15",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-16",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support"
+      ],
+      "notes": "A related quantity is not a deadline."
+    },
+    {
+      "id": "final-17",
+      "answerable": true,
+      "supportIds": [
+        "final-4-20:pdf:5"
+      ],
+      "requiredIds": [
+        "final-4-20:pdf:1",
+        "final-4-20:pdf:2",
+        "final-4-20:pdf:3",
+        "final-4-20:pdf:4",
+        "final-4-20:pdf:5",
+        "final-4-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-18",
+      "answerable": true,
+      "supportIds": [
+        "final-4-10:pdf:3"
+      ],
+      "requiredIds": [
+        "final-4-10:pdf:1",
+        "final-4-10:pdf:2",
+        "final-4-10:pdf:3",
+        "final-4-10:pdf:4",
+        "final-4-10:pdf:5",
+        "final-4-10:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-19",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-20",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "ambiguous-evidence"
+      ],
+      "notes": "Two approved policies; no precedence supplied."
+    },
+    {
+      "id": "final-21",
+      "answerable": true,
+      "supportIds": [
+        "final-5-20:docx:2"
+      ],
+      "requiredIds": [
+        "final-5-20:docx:1",
+        "final-5-20:docx:2",
+        "final-5-20:docx:3",
+        "final-5-20:docx:4",
+        "final-5-20:docx:5",
+        "final-5-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-22",
+      "answerable": true,
+      "supportIds": [
+        "final-5-20:docx:4"
+      ],
+      "requiredIds": [
+        "final-5-20:docx:1",
+        "final-5-20:docx:2",
+        "final-5-20:docx:3",
+        "final-5-20:docx:4",
+        "final-5-20:docx:5",
+        "final-5-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-23",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-24",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "No eligible department evidence."
+    },
+    {
+      "id": "final-25",
+      "answerable": true,
+      "supportIds": [
+        "final-6-20:7"
+      ],
+      "requiredIds": [
+        "final-6-20:1",
+        "final-6-20:4",
+        "final-6-20:7",
+        "final-6-20:10",
+        "final-6-20:13",
+        "final-6-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-26",
+      "answerable": true,
+      "supportIds": [
+        "final-6-20:1"
+      ],
+      "requiredIds": [
+        "final-6-20:1",
+        "final-6-20:4",
+        "final-6-20:7",
+        "final-6-20:10",
+        "final-6-20:13",
+        "final-6-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-27",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-28",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "Unapproved proposals cannot support answers."
+    },
+    {
+      "id": "final-29",
+      "answerable": true,
+      "supportIds": [
+        "final-7-20:pdf:4"
+      ],
+      "requiredIds": [
+        "final-7-20:pdf:1",
+        "final-7-20:pdf:2",
+        "final-7-20:pdf:3",
+        "final-7-20:pdf:4",
+        "final-7-20:pdf:5",
+        "final-7-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-30",
+      "answerable": true,
+      "supportIds": [
+        "final-7-20:pdf:5"
+      ],
+      "requiredIds": [
+        "final-7-20:pdf:1",
+        "final-7-20:pdf:2",
+        "final-7-20:pdf:3",
+        "final-7-20:pdf:4",
+        "final-7-20:pdf:5",
+        "final-7-20:pdf:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-31",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-32",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support"
+      ],
+      "notes": "A related quantity is not a deadline."
+    },
+    {
+      "id": "final-33",
+      "answerable": true,
+      "supportIds": [
+        "final-8-20:docx:1"
+      ],
+      "requiredIds": [
+        "final-8-20:docx:1",
+        "final-8-20:docx:2",
+        "final-8-20:docx:3",
+        "final-8-20:docx:4",
+        "final-8-20:docx:5",
+        "final-8-20:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-34",
+      "answerable": true,
+      "supportIds": [
+        "final-8-10:docx:2"
+      ],
+      "requiredIds": [
+        "final-8-10:docx:1",
+        "final-8-10:docx:2",
+        "final-8-10:docx:3",
+        "final-8-10:docx:4",
+        "final-8-10:docx:5",
+        "final-8-10:docx:6"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-35",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-36",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "ambiguous-evidence"
+      ],
+      "notes": "Two approved policies; no precedence supplied."
+    },
+    {
+      "id": "final-37",
+      "answerable": true,
+      "supportIds": [
+        "final-9-20:13"
+      ],
+      "requiredIds": [
+        "final-9-20:1",
+        "final-9-20:4",
+        "final-9-20:7",
+        "final-9-20:10",
+        "final-9-20:13",
+        "final-9-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-38",
+      "answerable": true,
+      "supportIds": [
+        "final-9-20:7"
+      ],
+      "requiredIds": [
+        "final-9-20:1",
+        "final-9-20:4",
+        "final-9-20:7",
+        "final-9-20:10",
+        "final-9-20:13",
+        "final-9-20:16"
+      ],
+      "notes": "Complete source policy retained for qualifications; direct support must match requested relation."
+    },
+    {
+      "id": "final-39",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-support",
+        "unsupported-question"
+      ],
+      "notes": "No insurance entitlement is defined."
+    },
+    {
+      "id": "final-40",
+      "answerable": false,
+      "supportIds": [],
+      "requiredIds": [],
+      "allowedReasons": [
+        "no-eligible-evidence"
+      ],
+      "notes": "No eligible department evidence."
+    }
+  ]
+}

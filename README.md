@@ -5,6 +5,7 @@ Enterprise Policy & Compliance Intelligence Assistant — first retrieval releas
 **Current project inventory:** [PROJECT_STATUS.md](PROJECT_STATUS.md). **Remaining original requirements and next milestone:** [ROADMAP.md](ROADMAP.md). The goal is an AI/ML engineering internship portfolio with learning alongside implementation, using free additional services. The increment descriptions and test counts below retain historical context; the status file takes precedence for current capability and verification claims.
 
 ## Implemented
+- Bounded extractive answers with exact quotations, full qualification context and explicit refusal. [Question forms](docs/ANSWERING_PROTOCOL.md), [one-shot results/failures](docs/ANSWERING_RESULTS.md), [Python evaluator/learning exercise](docs/ANSWERING_LEARNING.md). Internal sample: 16/20 correct answerable and 0/20 unsupported; not independently authored evaluation or general reliability evidence.
 - Private hosted web application with owner-scoped persisted uploads in D1.
 - Six bundled fictional policy versions across four policy families; one historical version and one draft.
 - TXT, PDF and DOCX uploads with manual metadata, exact-file/extracted-text duplicate detection, version identity uniqueness, original-file downloads and extracted-text downloads. See the ingestion increment below for format limits.
@@ -43,7 +44,7 @@ Historical note: browser QA was unavailable for the initial increment. Later Win
 4. Upload a fictional TXT policy with a new ID; refresh and inspect/download it. Re-upload identical text to exercise duplicate handling. Delete your upload when finished.
 
 ## Next increments
-Use [ROADMAP.md](ROADMAP.md) for the ordered remaining requirements. Grounded extractive answering, explicit refusal and an evaluation protocol fixed before tuning are the recommended next milestone. Several items in older increment plans, including semantic retrieval and potential-conflict review, already exist. All additional services must remain free.
+Use [ROADMAP.md](ROADMAP.md) for the ordered remaining requirements. Bounded extractive answering/refusal is implemented; independently authored evaluation and broader question coverage are the recommended follow-up. Several items in older increment plans, including semantic retrieval and potential-conflict review, already exist. All additional services must remain free.
 
 ## PDF / DOCX ingestion increment
 Text-based PDF and DOCX upload is now implemented. Extraction is lazy-loaded in the browser using PDF.js 6.4.299 and Mammoth 1.13.0; no file or text is sent to a hosted model. The upload modal has a read → inspect → save flow. PDF citations use physical page numbers and extracted line numbers; DOCX citations use extracted body paragraph ordinals, never Word page numbers. PDF retrieval units are pages, DOCX units are paragraphs, TXT units remain blank-line sections.
