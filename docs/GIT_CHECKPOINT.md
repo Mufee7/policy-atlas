@@ -1,5 +1,11 @@
 # Git and source checkpoint — reconciliation 2026-10-19
 
+## Subsequent local Git initialization
+
+At the user's explicit request for the answering milestone, a local `main` repository was initialized and the reconciled baseline committed as `c2cfe5ef6757bbfc793dff953f68534c5ac923c4`. Staged inspection covered 212 source files, common credential-shaped content, excluded private/runtime paths and retained third-party model/parser/runtime notices. `.gitignore` now explicitly excludes additional credential/private-backup paths. No remote is configured; nothing was pushed or deployed.
+
+Commit `51fa082` records the answering protocol, development inputs/labels and reserved-set hashes **before implementation**. Reserved labels remain under ignored `work/` until their one-shot evaluation is consumed. [The answering protocol](ANSWERING_PROTOCOL.md) defines the freeze procedure; the implementation freeze and final attempt records are stored under `evaluation/answering/` when completed. The original reconciliation record below remains historical evidence of the earlier source-export state, not the current Git status.
+
 ## Actual Git state
 
 Executed `git status --short --branch` from `D:\Mufee\Projects\policy-atlas-source\policy-atlas`: exit 128, `fatal: not a git repository (or any of the parent directories): .git`. The workspace and inspected parent locations have no `.git` entry. Therefore HEAD, branch, index, remotes, staged/unstaged status and a Git diff cannot be recorded here. No new Git commit exists for this reconciliation. No `git init`, reset, clean, checkout or history rewrite was performed.
