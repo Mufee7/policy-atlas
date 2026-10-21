@@ -44,7 +44,7 @@ Open `http://127.0.0.1:5173/signin-with-chatgpt?return_to=/`. Default startup bi
 
 The React/TypeScript browser extracts text, loads the local corpus through TypeScript APIs, filters/ranks passages and selects source quotations. Citation checks resolve stored sections and exact versions. The local Worker uses Drizzle with **emulated D1** for metadata/text/notes and **emulated R2** for original bytes; no cloud provisioning is involved.
 
-[Architecture diagram and walkthrough](docs/ARCHITECTURE.md) explain ingestion â†’ retrieval â†’ extractive answering â†’ citations, plus comparison and conflict review. Ask `What is the remote work allowance?` with Approved only, People and date `2026-10-19`; inspect qualifications. Then ask `What is the remote work insurance allowance?` to demonstrate refusal.
+[Architecture diagram and walkthrough](docs/ARCHITECTURE.md) explain ingestion → retrieval → extractive answering → citations, plus comparison and conflict review. Ask `What is the remote work allowance?` with Approved only, People and date `2026-10-19`; inspect qualifications. Then ask `What is the remote work insurance allowance?` to demonstrate refusal.
 
 ## Evaluation and verification
 

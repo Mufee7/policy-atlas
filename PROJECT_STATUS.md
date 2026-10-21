@@ -1,4 +1,4 @@
-# Policy Atlas â€” authoritative project status
+# Policy Atlas — authoritative project status
 
 Updated 2026-10-21 for the single-user local portfolio release. Goal: an **AI/ML engineering internship portfolio with learning alongside implementation**, using free additional services and preserving the working app. [ROADMAP.md](ROADMAP.md) orders remaining original requirements. Older increment reports are historical evidence, not competing completion checklists.
 
