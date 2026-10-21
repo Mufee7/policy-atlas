@@ -71,4 +71,4 @@ Latest configuration-migration checks at `c788ff1` passed: **101 Node tests, sev
 
 Detailed [setup/export instructions](docs/LOCAL_SETUP.md), [release checklist](docs/LOCAL_RELEASE_CHECKLIST.md), [repository audit](docs/REPOSITORY_AUDIT.md), [implementation history](docs/IMPLEMENTATION_HISTORY.md) and [Git provenance](docs/GIT_CHECKPOINT.md) retain operational and historical evidence.
 
-Developed by Mufeedh Ahmed with AI-assisted coding and review using OpenAI Codex, adapting an OpenAI Sites starter. Third-party model, parser, runtime and starter license notices are retained; [the repository audit](docs/REPOSITORY_AUDIT.md) lists them. A project-wide public-source license remains the author's decision before redistribution.
+Developed by Mufeedh Ahmed. Third-party model, parser, runtime and starter license notices are retained; [the repository audit](docs/REPOSITORY_AUDIT.md) lists them. A project-wide public-source license remains the author's decision before redistribution.
