@@ -1,6 +1,6 @@
-# Policy Atlas — authoritative project status
+# Policy Atlas â€” authoritative project status
 
-Updated 2026-10-19 for the single-user local portfolio release. Goal: an **AI/ML engineering internship portfolio with learning alongside implementation**, using free additional services and preserving the working app. [ROADMAP.md](ROADMAP.md) orders remaining original requirements. Older increment reports are historical evidence, not competing completion checklists.
+Updated 2026-10-21 for the single-user local portfolio release. Goal: an **AI/ML engineering internship portfolio with learning alongside implementation**, using free additional services and preserving the working app. [ROADMAP.md](ROADMAP.md) orders remaining original requirements. Older increment reports are historical evidence, not competing completion checklists.
 
 ## Current release scope
 
@@ -67,7 +67,7 @@ This is **internally reserved synthetic evaluation**, authored by the same codin
 
 Presentation/repository cleanup followed the answering freeze: Policy Atlas wording and introductory documentation were standardized, original increment detail moved to [implementation history](docs/IMPLEMENTATION_HISTORY.md), and source-export exclusions/completeness were tightened. That checkpoint retained `.openai/hosting.json` and integration identifiers. The subsequent [minimal local-configuration migration](docs/LOCAL_CONFIG_MIGRATION.md) moves only the binding manifest to `local-bindings.json`, removes the obsolete Sites packaging hook and preserves storage/ownership/sign-in identifiers. [Repository audit](docs/REPOSITORY_AUDIT.md). Answering/retrieval/scoring code and raw evaluation evidence are unchanged; the historical frozen-source manifest is not a fingerprint of the later presentation cleanup. No final evaluation was rerun.
 
-Local Git now exists on `main`: baseline `c2cfe5e`, protocol/reservation `51fa082`, frozen implementation `5b6c60f`. No remote, push or deployment. [Git checkpoint](docs/GIT_CHECKPOINT.md) retains the earlier no-repository finding as historical provenance. Root `SOURCE-SNAPSHOT.json` is the old upstream export, not current HEAD.
+Local Git now exists on `main`: baseline `c2cfe5e`, protocol/reservation `51fa082`, frozen implementation `5b6c60f`. Source was published to GitHub on 2026-10-21, preserving local and pre-existing GitHub history. No application deployment occurred. Internal transfer manifests and personal portfolio drafts are excluded from the current published source; historical commits remain intact. Root `SOURCE-SNAPSHOT.json` is the old upstream export, not current HEAD.
 
 Python learning now includes a standard-library evaluator, input validation, annotation-based metrics, refusal/coverage analysis and Wilson intervals. [Learning guide and exercise](docs/ANSWERING_LEARNING.md). No pip dependencies; local tested Python 3.13.13. FastAPI/Pydantic/OpenAPI and Python API integration remain missing; do not rewrite merely to add them.
 

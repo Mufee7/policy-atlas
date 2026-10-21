@@ -20,7 +20,11 @@ Any later question-language improvement uses new development cases and a new fin
 
 <a id="next-milestone"></a>
 
-## 3. Recommended next milestone: local portfolio preparation
+## 3. Portfolio documentation and next quality milestone
+
+The public repository includes the README, architecture, setup, tests, curated screenshots and evaluation evidence. Personal presentation scripts, CV drafts and transfer manifests are kept outside the published source. The next quality milestone is the independently authored evaluation described above; public deployment remains deferred.
+
+Portfolio maintenance checklist:
 
 1. Refresh the [README](README.md) around the verified local quick start, supported use cases, measured results and limitations; link existing operating/evaluation guides.
 2. Prepare one architecture walkthrough showing browser ingestion/extraction, BM25 and pretrained MiniLM retrieval, deterministic extractive selection/refusal, TypeScript APIs, emulated D1/R2 and local backup boundaries. Distinguish exact stored-text verification from original-file fidelity, rule-based conflicts from ML, and extractive output from generation.
@@ -35,4 +39,4 @@ Any later question-language improvement uses new development cases and a new fin
 - **Broader ingestion/conflict quality:** original-layout fidelity and independent conflict precision/recall remain bounded/unverified. No OCR, broad contradiction model, semantic/legal authority inference or immutable review history is claimed. Extend only in response to observed needs.
 - **Recovery at scale:** distributed D1/R2 transactions, power-loss guarantees, cross-version restore and hosted recovery remain outside this local release.
 
-[Verification history](docs/VERIFICATION_HISTORY.md), [portability audit](docs/PORTABILITY_AUDIT.md), [repository audit](docs/REPOSITORY_AUDIT.md) and [Git provenance](docs/GIT_CHECKPOINT.md) retain earlier work. This roadmap supersedes the former deployment-oriented ordering; it does not erase missing original requirements or evaluation limitations.
+[Verification history](docs/VERIFICATION_HISTORY.md), [portability audit](docs/PORTABILITY_AUDIT.md), [repository audit](docs/REPOSITORY_AUDIT.md) retain earlier work. This roadmap supersedes the former deployment-oriented ordering; it does not erase missing original requirements or evaluation limitations.

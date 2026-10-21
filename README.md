@@ -40,11 +40,11 @@ Open `http://127.0.0.1:5173/signin-with-chatgpt?return_to=/`. Default startup bi
 
 [LOCAL_SETUP.md](docs/LOCAL_SETUP.md) covers prerequisites, portable tools, the Windows launcher, troubleshooting and backups. Initial dependency installation needs network access; model assets are served by the local app and inference runs on-device. The release rehearsal reused installed dependencies; fresh-machine/full reinstall remains unverified. Source exports are not backups of your library.
 
-## Architecture and demonstration
+## Architecture
 
 The React/TypeScript browser extracts text, loads the local corpus through TypeScript APIs, filters/ranks passages and selects source quotations. Citation checks resolve stored sections and exact versions. The local Worker uses Drizzle with **emulated D1** for metadata/text/notes and **emulated R2** for original bytes; no cloud provisioning is involved.
 
-[Architecture diagram and walkthrough](docs/ARCHITECTURE.md) explain ingestion → retrieval → extractive answering → citations, plus comparison and conflict review. [The 3:50 demo script](docs/DEMO_SCRIPT.md) supplies exact inputs and narration. Ask `What is the remote work allowance?` with Approved only, People and date `2026-10-19`; inspect qualifications. Then ask `What is the remote work insurance allowance?` to demonstrate refusal.
+[Architecture diagram and walkthrough](docs/ARCHITECTURE.md) explain ingestion â†’ retrieval â†’ extractive answering â†’ citations, plus comparison and conflict review. Ask `What is the remote work allowance?` with Approved only, People and date `2026-10-19`; inspect qualifications. Then ask `What is the remote work insurance allowance?` to demonstrate refusal.
 
 ## Evaluation and verification
 
@@ -65,10 +65,10 @@ Latest configuration-migration checks at `c788ff1` passed: **101 Node tests, sev
 - One trusted local operator only; owner predicates and mock sign-in are not shared-host security. [Deployment blockers remain open](docs/DEPLOYMENT_SECURITY_REVIEW.md).
 - Backups contain private plaintext; restore checks used matching application/dependency versions. No power-loss or cross-version guarantee.
 
-[PROJECT_STATUS.md](PROJECT_STATUS.md) is the capability inventory. [ROADMAP.md](ROADMAP.md) retains independent-evaluation gaps and deferred requirements. Python work includes an offline evaluator; FastAPI is not implemented. [CV and LinkedIn drafts](docs/PORTFOLIO_DRAFTS.md) are for review only.
+[PROJECT_STATUS.md](PROJECT_STATUS.md) is the capability inventory. [ROADMAP.md](ROADMAP.md) retains independent-evaluation gaps and deferred requirements. Python work includes an offline evaluator; FastAPI is not implemented.
 
 ## Technical records and attribution
 
-Detailed [setup/export instructions](docs/LOCAL_SETUP.md), [release checklist](docs/LOCAL_RELEASE_CHECKLIST.md), [repository audit](docs/REPOSITORY_AUDIT.md), [implementation history](docs/IMPLEMENTATION_HISTORY.md) and [Git provenance](docs/GIT_CHECKPOINT.md) retain operational and historical evidence.
+See the [setup guide](docs/LOCAL_SETUP.md), [architecture](docs/ARCHITECTURE.md), [evaluation results](docs/ANSWERING_RESULTS.md) and [release verification](docs/LOCAL_RELEASE_CHECKLIST.md) for reproducibility and measured limitations.
 
 Developed by Mufeedh Ahmed. Third-party model, parser, runtime and starter license notices are retained; [the repository audit](docs/REPOSITORY_AUDIT.md) lists them. A project-wide public-source license remains the author's decision before redistribution.
